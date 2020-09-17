@@ -1,0 +1,296 @@
+minion:
+    ----------
+    biosreleasedate:
+        12/01/2006
+    biosversion:
+        VirtualBox
+    cpu_flags:
+        - fpu
+        - vme
+        - de
+        - pse
+        - tsc
+        - msr
+        - pae
+        - mce
+        - cx8
+        - apic
+        - sep
+        - mtrr
+        - pge
+        - mca
+        - cmov
+        - pat
+        - pse36
+        - clflush
+        - mmx
+        - fxsr
+        - sse
+        - sse2
+        - ht
+        - syscall
+        - nx
+        - rdtscp
+        - lm
+        - constant_tsc
+        - rep_good
+        - nopl
+        - xtopology
+        - nonstop_tsc
+        - cpuid
+        - tsc_known_freq
+        - pni
+        - pclmulqdq
+        - ssse3
+        - cx16
+        - pcid
+        - sse4_1
+        - sse4_2
+        - movbe
+        - popcnt
+        - aes
+        - xsave
+        - avx
+        - rdrand
+        - hypervisor
+        - lahf_lm
+        - abm
+        - invpcid_single
+        - pti
+        - fsgsbase
+        - avx2
+        - invpcid
+        - md_clear
+        - flush_l1d
+    cpu_model:
+        Intel(R) Core(TM) i5-4258U CPU @ 2.40GHz
+    cpuarch:
+        x86_64
+    cwd:
+        /home/vagrant
+    disks:
+        - sda
+    dns:
+        ----------
+        domain:
+        ip4_nameservers:
+            - 10.0.2.3
+        ip6_nameservers:
+        nameservers:
+            - 10.0.2.3
+        options:
+        search:
+        sortlist:
+    domain:
+    fqdn:
+        minion
+    fqdn_ip4:
+        - 127.0.2.1
+    fqdn_ip6:
+    fqdns:
+    gid:
+        0
+    gpus:
+        |_
+          ----------
+          model:
+              VirtualBox Graphics Adapter
+          vendor:
+              unknown
+    groupname:
+        root
+    host:
+        minion
+    hwaddr_interfaces:
+        ----------
+        eth0:
+            08:00:27:8d:c0:4d
+        eth1:
+            08:00:27:fd:c1:f7
+        lo:
+            00:00:00:00:00:00
+    id:
+        minion
+    init:
+        systemd
+    ip4_gw:
+        10.0.2.2
+    ip4_interfaces:
+        ----------
+        eth0:
+            - 10.0.2.15
+        eth1:
+            - 192.168.0.11
+        lo:
+            - 127.0.0.1
+    ip6_gw:
+        False
+    ip6_interfaces:
+        ----------
+        eth0:
+            - fe80::a00:27ff:fe8d:c04d
+        eth1:
+            - fe80::a00:27ff:fefd:c1f7
+        lo:
+            - ::1
+    ip_gw:
+        True
+    ip_interfaces:
+        ----------
+        eth0:
+            - 10.0.2.15
+            - fe80::a00:27ff:fe8d:c04d
+        eth1:
+            - 192.168.0.11
+            - fe80::a00:27ff:fefd:c1f7
+        lo:
+            - 127.0.0.1
+            - ::1
+    ipv4:
+        - 10.0.2.15
+        - 127.0.0.1
+        - 192.168.0.11
+    ipv6:
+        - ::1
+        - fe80::a00:27ff:fe8d:c04d
+        - fe80::a00:27ff:fefd:c1f7
+    kernel:
+        Linux
+    kernelparams:
+        |_
+          - BOOT_IMAGE
+          - /boot/vmlinuz-4.19.0-9-amd64
+        |_
+          - root
+          - None
+        |_
+          - ro
+          - None
+        |_
+          - net.ifnames
+          - 0
+        |_
+          - quiet
+          - None
+    kernelrelease:
+        4.19.0-9-amd64
+    kernelversion:
+        #1 SMP Debian 4.19.118-2 (2020-04-29)
+    locale_info:
+        ----------
+        defaultencoding:
+            UTF-8
+        defaultlanguage:
+            en_US
+        detectedencoding:
+            UTF-8
+        timezone:
+            GMT
+    localhost:
+        minion
+    lsb_distrib_codename:
+        buster
+    lsb_distrib_description:
+        Debian GNU/Linux 10 (buster)
+    lsb_distrib_id:
+        Debian
+    lsb_distrib_release:
+        10
+    machine_id:
+        35c67d2ed42f41dd800715fa8f65d72d
+    manufacturer:
+        innotek GmbH
+    master:
+        192.168.0.10
+    mem_total:
+        483
+    nodename:
+        minion
+    num_cpus:
+        2
+    num_gpus:
+        1
+    os:
+        Debian
+    os_family:
+        Debian
+    osarch:
+        amd64
+    oscodename:
+        buster
+    osfinger:
+        Debian-10
+    osfullname:
+        Debian
+    osmajorrelease:
+        10
+    osrelease:
+        10
+    osrelease_info:
+        - 10
+    path:
+        /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    pid:
+        3682
+    productname:
+        VirtualBox
+    ps:
+        ps -efHww
+    pythonexecutable:
+        /usr/bin/python3
+    pythonpath:
+        - /usr/bin
+        - /usr/lib/python37.zip
+        - /usr/lib/python3.7
+        - /usr/lib/python3.7/lib-dynload
+        - /usr/local/lib/python3.7/dist-packages
+        - /usr/lib/python3/dist-packages
+    pythonversion:
+        - 3
+        - 7
+        - 3
+        - final
+        - 0
+    saltpath:
+        /usr/lib/python3/dist-packages/salt
+    saltversion:
+        3001.1
+    saltversioninfo:
+        - 3001
+        - 1
+    serialnumber:
+        0
+    server_id:
+        279719642
+    shell:
+        /bin/bash
+    ssds:
+    swap_total:
+        1020
+    systemd:
+        ----------
+        features:
+            +PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid
+        version:
+            241
+    systempath:
+        - /usr/local/sbin
+        - /usr/local/bin
+        - /usr/sbin
+        - /usr/bin
+        - /sbin
+        - /bin
+    uid:
+        0
+    username:
+        root
+    uuid:
+        5705f2f1-331f-485c-bd4b-48469a565d96
+    virtual:
+        VirtualBox
+    zfs_feature_flags:
+        False
+    zfs_support:
+        False
+    zmqversion:
+        4.3.1
