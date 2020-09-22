@@ -1,20 +1,202 @@
-root@master:/srv/salt# salt minion state.apply supertux
+root@master:/srv/salt# salt minion state.apply test
 minion:
 ----------
-          ID: supertux
+          ID: install_requirements
     Function: pkg.installed
-      Result: True
-     Comment: The following packages were installed/updated: supertux
-     Started: 16:04:04.836699
-    Duration: 146057.065 ms
+      Result: False
+     Comment: The following packages failed to install/update: libcurl3-dev
+              17 targeted packages were installed/updated.
+     Started: 07:00:48.792217
+    Duration: 153000.952 ms
      Changes:   
               ----------
+              autoconf:
+                  ----------
+                  new:
+                      2.69-11
+                  old:
+              automake:
+                  ----------
+                  new:
+                      1:1.16.1-4
+                  old:
+              autotools-dev:
+                  ----------
+                  new:
+                      20180224.1
+                  old:
+              binutils:
+                  ----------
+                  new:
+                      2.31.1-16
+                  old:
+              binutils-common:
+                  ----------
+                  new:
+                      2.31.1-16
+                  old:
+              binutils-x86-64-linux-gnu:
+                  ----------
+                  new:
+                      2.31.1-16
+                  old:
+              build-essential:
+                  ----------
+                  new:
+                      12.6
+                  old:
+              cmake:
+                  ----------
+                  new:
+                      3.13.4-1
+                  old:
+              cmake-data:
+                  ----------
+                  new:
+                      3.13.4-1
+                  old:
+              cpp:
+                  ----------
+                  new:
+                      4:8.3.0-1
+                  old:
+              cpp-8:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
+              dbus:
+                  ----------
+                  new:
+                      1.12.20-0+deb10u1
+                  old:
+                      1.12.16-1
+              dh-python:
+                  ----------
+                  new:
+                      3.20190308
+                  old:
+              dpkg-dev:
+                  ----------
+                  new:
+                      1.19.7
+                  old:
+              fakeroot:
+                  ----------
+                  new:
+                      1.23-1
+                  old:
+              g++:
+                  ----------
+                  new:
+                      4:8.3.0-1
+                  old:
+              g++-8:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
+              gcc:
+                  ----------
+                  new:
+                      4:8.3.0-1
+                  old:
+              gcc-8:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
+              gfortran:
+                  ----------
+                  new:
+                      4:8.3.0-1
+                  old:
+              gfortran-8:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
+              gir1.2-glib-2.0:
+                  ----------
+                  new:
+                      1.58.3-2
+                  old:
+              gir1.2-ibus-1.0:
+                  ----------
+                  new:
+                      1.5.19-4+deb10u1
+                  old:
+              git:
+                  ----------
+                  new:
+                      1:2.20.1-2+deb10u3
+                  old:
+              git-man:
+                  ----------
+                  new:
+                      1:2.20.1-2+deb10u3
+                  old:
+              ibverbs-providers:
+                  ----------
+                  new:
+                      22.1-1
+                  old:
+              icu-devtools:
+                  ----------
+                  new:
+                      63.1-6+deb10u1
+                  old:
+              jam:
+                  ----------
+                  new:
+                      2.6-1+b2
+                  old:
+              libalgorithm-diff-perl:
+                  ----------
+                  new:
+                      1.19.03-2
+                  old:
+              libalgorithm-diff-xs-perl:
+                  ----------
+                  new:
+                      0.04-5+b1
+                  old:
+              libalgorithm-merge-perl:
+                  ----------
+                  new:
+                      0.08-3
+                  old:
+              libapr1:
+                  ----------
+                  new:
+                      1.6.5-1+b1
+                  old:
+              libaprutil1:
+                  ----------
+                  new:
+                      1.6.1-4
+                  old:
+              libarchive13:
+                  ----------
+                  new:
+                      3.3.3-4+deb10u1
+                  old:
+              libasan5:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
               libasound2:
                   ----------
                   new:
                       1.1.8-1
                   old:
               libasound2-data:
+                  ----------
+                  new:
+                      1.1.8-1
+                  old:
+              libasound2-dev:
                   ----------
                   new:
                       1.1.8-1
@@ -29,7 +211,42 @@ minion:
                   new:
                       8.3.0-6
                   old:
+              libbinutils:
+                  ----------
+                  new:
+                      2.31.1-16
+                  old:
+              libblkid-dev:
+                  ----------
+                  new:
+                      2.33.1-0.1
+                  old:
+              libboost-all-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-atomic-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-atomic1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
               libboost-atomic1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-chrono-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-chrono1.67-dev:
                   ----------
                   new:
                       1.67.0-13+deb10u1
@@ -39,7 +256,102 @@ minion:
                   new:
                       1.67.0-13+deb10u1
                   old:
+              libboost-container-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-container1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-container1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-context-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-context1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-context1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-coroutine-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-coroutine1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-coroutine1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-date-time-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-date-time1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
               libboost-date-time1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-exception-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-exception1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-fiber-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-fiber1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-fiber1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-filesystem-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-filesystem1.67-dev:
                   ----------
                   new:
                       1.67.0-13+deb10u1
@@ -49,7 +361,252 @@ minion:
                   new:
                       1.67.0-13+deb10u1
                   old:
+              libboost-graph-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-graph-parallel-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-graph-parallel1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-graph-parallel1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-graph1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-graph1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-iostreams-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-iostreams1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-iostreams1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-locale-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-locale1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
               libboost-locale1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-log-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-log1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-log1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-math-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-math1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-math1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-mpi-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-mpi-python-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-mpi-python1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-mpi-python1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-mpi1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-mpi1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-numpy-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-numpy1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-numpy1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-program-options-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-program-options1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-program-options1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-python-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-python1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-python1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-random-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-random1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-random1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-regex-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-regex1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-regex1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-serialization-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-serialization1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-serialization1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-signals-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-signals1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-signals1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-stacktrace-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-stacktrace1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-stacktrace1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-system-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-system1.67-dev:
                   ----------
                   new:
                       1.67.0-13+deb10u1
@@ -59,10 +616,151 @@ minion:
                   new:
                       1.67.0-13+deb10u1
                   old:
+              libboost-test-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-test1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-test1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-thread-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-thread1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
               libboost-thread1.67.0:
                   ----------
                   new:
                       1.67.0-13+deb10u1
+                  old:
+              libboost-timer-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-timer1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-timer1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-tools-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-type-erasure-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-type-erasure1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-type-erasure1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-wave-dev:
+                  ----------
+                  new:
+                      1.67.0.1
+                  old:
+              libboost-wave1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost-wave1.67.0:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost1.67-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libboost1.67-tools-dev:
+                  ----------
+                  new:
+                      1.67.0-13+deb10u1
+                  old:
+              libc-dev-bin:
+                  ----------
+                  new:
+                      2.28-10
+                  old:
+              libc6-dev:
+                  ----------
+                  new:
+                      2.28-10
+                  old:
+              libcaf-openmpi-3:
+                  ----------
+                  new:
+                      2.4.0-2
+                  old:
+              libcc1-0:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
+              libcoarrays-dev:
+                  ----------
+                  new:
+                      2.4.0-2
+                  old:
+              libcoarrays-openmpi-dev:
+                  ----------
+                  new:
+                      2.4.0-2
+                  old:
+              libcurl4:
+                  ----------
+                  new:
+                      7.64.0-4+deb10u1
+                  old:
+              libcurl4-openssl-dev:
+                  ----------
+                  new:
+                      7.64.0-4+deb10u1
+                  old:
+              libdbus-1-3:
+                  ----------
+                  new:
+                      1.12.20-0+deb10u1
+                  old:
+                      1.12.16-1
+              libdbus-1-dev:
+                  ----------
+                  new:
+                      1.12.20-0+deb10u1
+                  old:
+              libdpkg-perl:
+                  ----------
+                  new:
+                      1.19.7
                   old:
               libdrm-amdgpu1:
                   ----------
@@ -70,6 +768,11 @@ minion:
                       2.4.97-1
                   old:
               libdrm-common:
+                  ----------
+                  new:
+                      2.4.97-1
+                  old:
+              libdrm-dev:
                   ----------
                   new:
                       2.4.97-1
@@ -94,20 +797,110 @@ minion:
                   new:
                       2.4.97-1
                   old:
+              libegl-mesa0:
+                  ----------
+                  new:
+                      18.3.6-2+deb10u1
+                  old:
+              libegl1:
+                  ----------
+                  new:
+                      1.1.0-1
+                  old:
+              libegl1-mesa-dev:
+                  ----------
+                  new:
+                      18.3.6-2+deb10u1
+                  old:
+              liberror-perl:
+                  ----------
+                  new:
+                      0.17027-2
+                  old:
+              libevent-2.1-6:
+                  ----------
+                  new:
+                      2.1.8-stable-4
+                  old:
+              libevent-core-2.1-6:
+                  ----------
+                  new:
+                      2.1.8-stable-4
+                  old:
+              libevent-pthreads-2.1-6:
+                  ----------
+                  new:
+                      2.1.8-stable-4
+                  old:
+              libexpat1-dev:
+                  ----------
+                  new:
+                      2.2.6-2+deb10u1
+                  old:
+              libfabric1:
+                  ----------
+                  new:
+                      1.6.2-3
+                  old:
+              libfakeroot:
+                  ----------
+                  new:
+                      1.23-1
+                  old:
+              libffi-dev:
+                  ----------
+                  new:
+                      3.2.1-9
+                  old:
+              libfile-fcntllock-perl:
+                  ----------
+                  new:
+                      0.22-3+b5
+                  old:
               libflac8:
                   ----------
                   new:
                       1.3.2-3
                   old:
-              libfribidi0:
+              libfreetype6-dev:
                   ----------
                   new:
-                      1.0.5-3.1+deb10u1
+                      2.9.1-3+deb10u1
+                  old:
+              libgbm1:
+                  ----------
+                  new:
+                      18.3.6-2+deb10u1
+                  old:
+              libgcc-8-dev:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
+              libgfortran-8-dev:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
+              libgfortran5:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
+              libgirepository-1.0-1:
+                  ----------
+                  new:
+                      1.58.3-2
                   old:
               libgl1:
                   ----------
                   new:
                       1.1.0-1
+                  old:
+              libgl1-mesa-dev:
+                  ----------
+                  new:
+                      18.3.6-2+deb10u1
                   old:
               libgl1-mesa-dri:
                   ----------
@@ -119,6 +912,26 @@ minion:
                   new:
                       18.3.6-2+deb10u1
                   old:
+              libgles1:
+                  ----------
+                  new:
+                      1.1.0-1
+                  old:
+              libgles2:
+                  ----------
+                  new:
+                      1.1.0-1
+                  old:
+              libgles2-mesa-dev:
+                  ----------
+                  new:
+                      18.3.6-2+deb10u1
+                  old:
+              libglew-dev:
+                  ----------
+                  new:
+                      2.1.0-4
+                  old:
               libglew2.1:
                   ----------
                   new:
@@ -129,7 +942,22 @@ minion:
                   new:
                       2.58.3-2+deb10u2
                   old:
+              libglib2.0-bin:
+                  ----------
+                  new:
+                      2.58.3-2+deb10u2
+                  old:
               libglib2.0-data:
+                  ----------
+                  new:
+                      2.58.3-2+deb10u2
+                  old:
+              libglib2.0-dev:
+                  ----------
+                  new:
+                      2.58.3-2+deb10u2
+                  old:
+              libglib2.0-dev-bin:
                   ----------
                   new:
                       2.58.3-2+deb10u2
@@ -138,6 +966,21 @@ minion:
                   ----------
                   new:
                       9.0.0-2.1+b3
+                  old:
+              libglu1-mesa-dev:
+                  ----------
+                  new:
+                      9.0.0-2.1+b3
+                  old:
+              libglvnd-core-dev:
+                  ----------
+                  new:
+                      1.1.0-1
+                  old:
+              libglvnd-dev:
+                  ----------
+                  new:
+                      1.1.0-1
                   old:
               libglvnd0:
                   ----------
@@ -154,20 +997,70 @@ minion:
                   new:
                       1.1.0-1
                   old:
-              libgraphite2-3:
+              libgomp1:
                   ----------
                   new:
-                      1.3.13-7
+                      8.3.0-6
                   old:
-              libharfbuzz0b:
+              libhwloc-dev:
                   ----------
                   new:
-                      2.3.1-1
+                      1.11.12-3
+                  old:
+              libhwloc-plugins:
+                  ----------
+                  new:
+                      1.11.12-3
+                  old:
+              libhwloc5:
+                  ----------
+                  new:
+                      1.11.12-3
+                  old:
+              libibus-1.0-5:
+                  ----------
+                  new:
+                      1.5.19-4+deb10u1
+                  old:
+              libibus-1.0-dev:
+                  ----------
+                  new:
+                      1.5.19-4+deb10u1
+                  old:
+              libibverbs-dev:
+                  ----------
+                  new:
+                      22.1-1
+                  old:
+              libibverbs1:
+                  ----------
+                  new:
+                      22.1-1
+                  old:
+              libice-dev:
+                  ----------
+                  new:
+                      2:1.0.9-2
                   old:
               libice6:
                   ----------
                   new:
                       2:1.0.9-2
+                  old:
+              libicu-dev:
+                  ----------
+                  new:
+                      63.1-6+deb10u1
+                  old:
+              libisl19:
+                  ----------
+                  new:
+                      0.20-2
+                  old:
+              libitm1:
+                  ----------
+                  new:
+                      8.3.0-6
                   old:
               libjbig0:
                   ----------
@@ -179,10 +1072,85 @@ minion:
                   new:
                       1:1.5.2-2+b1
                   old:
+              libjsoncpp1:
+                  ----------
+                  new:
+                      1.7.4-3
+                  old:
               libllvm7:
                   ----------
                   new:
                       1:7.0.1-8
+                  old:
+              liblsan0:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
+              libltdl-dev:
+                  ----------
+                  new:
+                      2.4.6-9
+                  old:
+              libltdl7:
+                  ----------
+                  new:
+                      2.4.6-9
+                  old:
+              libmount-dev:
+                  ----------
+                  new:
+                      2.33.1-0.1
+                  old:
+              libmpc3:
+                  ----------
+                  new:
+                      1.1.0-1
+                  old:
+              libmpfr6:
+                  ----------
+                  new:
+                      4.0.2-1
+                  old:
+              libmpx2:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
+              libnl-3-200:
+                  ----------
+                  new:
+                      3.4.0-1
+                  old:
+              libnl-3-dev:
+                  ----------
+                  new:
+                      3.4.0-1
+                  old:
+              libnl-route-3-200:
+                  ----------
+                  new:
+                      3.4.0-1
+                  old:
+              libnl-route-3-dev:
+                  ----------
+                  new:
+                      3.4.0-1
+                  old:
+              libnuma-dev:
+                  ----------
+                  new:
+                      2.0.12-1
+                  old:
+              libnuma1:
+                  ----------
+                  new:
+                      2.0.12-1
+                  old:
+              libogg-dev:
+                  ----------
+                  new:
+                      1.3.2-1+b1
                   old:
               libogg0:
                   ----------
@@ -194,27 +1162,179 @@ minion:
                   new:
                       1:1.19.1-1
                   old:
+              libopenal-dev:
+                  ----------
+                  new:
+                      1:1.19.1-1
+                  old:
               libopenal1:
                   ----------
                   new:
                       1:1.19.1-1
+                  old:
+              libopengl0:
+                  ----------
+                  new:
+                      1.1.0-1
+                  old:
+              libopenmpi-dev:
+                  ----------
+                  new:
+                      3.1.3-11
+                  old:
+              libopenmpi3:
+                  ----------
+                  new:
+                      3.1.3-11
                   old:
               libpciaccess0:
                   ----------
                   new:
                       0.14-1
                   old:
+              libpcre16-3:
+                  ----------
+                  new:
+                      2:8.39-12
+                  old:
+              libpcre3-dev:
+                  ----------
+                  new:
+                      2:8.39-12
+                  old:
+              libpcre32-3:
+                  ----------
+                  new:
+                      2:8.39-12
+                  old:
+              libpcrecpp0v5:
+                  ----------
+                  new:
+                      2:8.39-12
+                  old:
+              libphysfs-dev:
+                  ----------
+                  new:
+                      3.0.1-3.1
+                  old:
+              libphysfs1:
+                  ----------
+                  new:
+                      3.0.1-3.1
+                  old:
+              libpmix2:
+                  ----------
+                  new:
+                      3.1.2-3
+                  old:
+              libpng-dev:
+                  ----------
+                  new:
+                      1.6.36-6
+                  old:
+              libpng-tools:
+                  ----------
+                  new:
+                      1.6.36-6
+                  old:
+              libpsm-infinipath1:
+                  ----------
+                  new:
+                      3.3+20.604758e7-6
+                  old:
+              libpsm2-2:
+                  ----------
+                  new:
+                      11.2.78-1
+                  old:
+              libpthread-stubs0-dev:
+                  ----------
+                  new:
+                      0.4-1
+                  old:
+              libpulse-dev:
+                  ----------
+                  new:
+                      12.2-4+deb10u1
+                  old:
+              libpulse-mainloop-glib0:
+                  ----------
+                  new:
+                      12.2-4+deb10u1
+                  old:
               libpulse0:
                   ----------
                   new:
                       12.2-4+deb10u1
                   old:
-              libraqm0:
+              libpython-dev:
                   ----------
                   new:
-                      0.5.0-1
+                      2.7.16-1
+                  old:
+              libpython2-dev:
+                  ----------
+                  new:
+                      2.7.16-1
+                  old:
+              libpython2.7:
+                  ----------
+                  new:
+                      2.7.16-2+deb10u1
+                  old:
+              libpython2.7-dev:
+                  ----------
+                  new:
+                      2.7.16-2+deb10u1
+                  old:
+              libpython3-dev:
+                  ----------
+                  new:
+                      3.7.3-1
+                  old:
+              libpython3.7:
+                  ----------
+                  new:
+                      3.7.3-2+deb10u2
+                  old:
+              libpython3.7-dev:
+                  ----------
+                  new:
+                      3.7.3-2+deb10u2
+                  old:
+              libpython3.7-minimal:
+                  ----------
+                  new:
+                      3.7.3-2+deb10u2
+                  old:
+                      3.7.3-2+deb10u1
+              libpython3.7-stdlib:
+                  ----------
+                  new:
+                      3.7.3-2+deb10u2
+                  old:
+                      3.7.3-2+deb10u1
+              libquadmath0:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
+              librdmacm1:
+                  ----------
+                  new:
+                      22.1-1
+                  old:
+              librhash0:
+                  ----------
+                  new:
+                      1.3.8-1
                   old:
               libsdl2-2.0-0:
+                  ----------
+                  new:
+                      2.0.9+dfsg1-1
+                  old:
+              libsdl2-dev:
                   ----------
                   new:
                       2.0.9+dfsg1-1
@@ -223,6 +1343,16 @@ minion:
                   ----------
                   new:
                       2.0.4+dfsg1-1+deb10u1
+                  old:
+              libsdl2-image-dev:
+                  ----------
+                  new:
+                      2.0.4+dfsg1-1+deb10u1
+                  old:
+              libselinux1-dev:
+                  ----------
+                  new:
+                      2.8-1+b1
                   old:
               libsensors-config:
                   ----------
@@ -234,6 +1364,26 @@ minion:
                   new:
                       1:3.5.0-3
                   old:
+              libsepol1-dev:
+                  ----------
+                  new:
+                      2.8-1
+                  old:
+              libserf-1-1:
+                  ----------
+                  new:
+                      1.3.9-7+b10
+                  old:
+              libsigsegv2:
+                  ----------
+                  new:
+                      2.12-2
+                  old:
+              libsm-dev:
+                  ----------
+                  new:
+                      2:1.2.3-1
+                  old:
               libsm6:
                   ----------
                   new:
@@ -244,15 +1394,65 @@ minion:
                   new:
                       1.0.28-6
                   old:
+              libsndio-dev:
+                  ----------
+                  new:
+                      1.5.0-3
+                  old:
               libsndio7.0:
                   ----------
                   new:
                       1.5.0-3
                   old:
+              libstdc++-8-dev:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
+              libsvn1:
+                  ----------
+                  new:
+                      1.10.4-1+deb10u1
+                  old:
               libtiff5:
                   ----------
                   new:
                       4.1.0+git191117-2~deb10u1
+                  old:
+              libtool:
+                  ----------
+                  new:
+                      2.4.6-9
+                  old:
+              libtsan0:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
+              libubsan1:
+                  ----------
+                  new:
+                      8.3.0-6
+                  old:
+              libudev-dev:
+                  ----------
+                  new:
+                      241-7~deb10u4
+                  old:
+              libutf8proc2:
+                  ----------
+                  new:
+                      2.3.0-1
+                  old:
+              libuv1:
+                  ----------
+                  new:
+                      1.24.1-1
+                  old:
+              libvorbis-dev:
+                  ----------
+                  new:
+                      1.3.6-2
                   old:
               libvorbis0a:
                   ----------
@@ -269,6 +1469,11 @@ minion:
                   new:
                       1.3.6-2
                   old:
+              libwayland-bin:
+                  ----------
+                  new:
+                      1.16.0-1
+                  old:
               libwayland-client0:
                   ----------
                   new:
@@ -279,7 +1484,17 @@ minion:
                   new:
                       1.16.0-1
                   old:
+              libwayland-dev:
+                  ----------
+                  new:
+                      1.16.0-1
+                  old:
               libwayland-egl1:
+                  ----------
+                  new:
+                      1.16.0-1
+                  old:
+              libwayland-server0:
                   ----------
                   new:
                       1.16.0-1
@@ -289,12 +1504,32 @@ minion:
                   new:
                       0.6.1-2
                   old:
+              libx11-dev:
+                  ----------
+                  new:
+                      2:1.6.7-1
+                  old:
+              libx11-xcb-dev:
+                  ----------
+                  new:
+                      2:1.6.7-1
+                  old:
               libx11-xcb1:
                   ----------
                   new:
                       2:1.6.7-1
                   old:
+              libxau-dev:
+                  ----------
+                  new:
+                      1:1.0.8-1+b2
+                  old:
               libxcb-dri2-0:
+                  ----------
+                  new:
+                      1.13.1-2
+                  old:
+              libxcb-dri2-0-dev:
                   ----------
                   new:
                       1.13.1-2
@@ -304,7 +1539,22 @@ minion:
                   new:
                       1.13.1-2
                   old:
+              libxcb-dri3-dev:
+                  ----------
+                  new:
+                      1.13.1-2
+                  old:
               libxcb-glx0:
+                  ----------
+                  new:
+                      1.13.1-2
+                  old:
+              libxcb-glx0-dev:
+                  ----------
+                  new:
+                      1.13.1-2
+                  old:
+              libxcb-present-dev:
                   ----------
                   new:
                       1.13.1-2
@@ -314,120 +1564,1724 @@ minion:
                   new:
                       1.13.1-2
                   old:
+              libxcb-randr0:
+                  ----------
+                  new:
+                      1.13.1-2
+                  old:
+              libxcb-randr0-dev:
+                  ----------
+                  new:
+                      1.13.1-2
+                  old:
+              libxcb-render0:
+                  ----------
+                  new:
+                      1.13.1-2
+                  old:
+              libxcb-render0-dev:
+                  ----------
+                  new:
+                      1.13.1-2
+                  old:
+              libxcb-shape0:
+                  ----------
+                  new:
+                      1.13.1-2
+                  old:
+              libxcb-shape0-dev:
+                  ----------
+                  new:
+                      1.13.1-2
+                  old:
+              libxcb-sync-dev:
+                  ----------
+                  new:
+                      1.13.1-2
+                  old:
               libxcb-sync1:
                   ----------
                   new:
                       1.13.1-2
+                  old:
+              libxcb-xfixes0:
+                  ----------
+                  new:
+                      1.13.1-2
+                  old:
+              libxcb-xfixes0-dev:
+                  ----------
+                  new:
+                      1.13.1-2
+                  old:
+              libxcb1-dev:
+                  ----------
+                  new:
+                      1.13.1-2
+                  old:
+              libxcursor-dev:
+                  ----------
+                  new:
+                      1:1.1.15-2
                   old:
               libxcursor1:
                   ----------
                   new:
                       1:1.1.15-2
                   old:
+              libxdamage-dev:
+                  ----------
+                  new:
+                      1:1.1.4-3+b3
+                  old:
               libxdamage1:
                   ----------
                   new:
                       1:1.1.4-3+b3
+                  old:
+              libxdmcp-dev:
+                  ----------
+                  new:
+                      1:1.1.2-3
+                  old:
+              libxext-dev:
+                  ----------
+                  new:
+                      2:1.3.3-1+b2
+                  old:
+              libxfixes-dev:
+                  ----------
+                  new:
+                      1:5.0.3-1
                   old:
               libxfixes3:
                   ----------
                   new:
                       1:5.0.3-1
                   old:
+              libxi-dev:
+                  ----------
+                  new:
+                      2:1.7.9-1
+                  old:
               libxi6:
                   ----------
                   new:
                       2:1.7.9-1
+                  old:
+              libxinerama-dev:
+                  ----------
+                  new:
+                      2:1.1.4-2
                   old:
               libxinerama1:
                   ----------
                   new:
                       2:1.1.4-2
                   old:
+              libxkbcommon-dev:
+                  ----------
+                  new:
+                      0.8.2-1
+                  old:
               libxkbcommon0:
                   ----------
                   new:
                       0.8.2-1
+                  old:
+              libxrandr-dev:
+                  ----------
+                  new:
+                      2:1.5.1-1
                   old:
               libxrandr2:
                   ----------
                   new:
                       2:1.5.1-1
                   old:
+              libxrender-dev:
+                  ----------
+                  new:
+                      1:0.9.10-1
+                  old:
               libxrender1:
                   ----------
                   new:
                       1:0.9.10-1
+                  old:
+              libxshmfence-dev:
+                  ----------
+                  new:
+                      1.3-1
                   old:
               libxshmfence1:
                   ----------
                   new:
                       1.3-1
                   old:
+              libxss-dev:
+                  ----------
+                  new:
+                      1:1.2.3-1
+                  old:
               libxss1:
                   ----------
                   new:
                       1:1.2.3-1
+                  old:
+              libxt-dev:
+                  ----------
+                  new:
+                      1:1.1.5-1+b3
+                  old:
+              libxt6:
+                  ----------
+                  new:
+                      1:1.1.5-1+b3
                   old:
               libxtst6:
                   ----------
                   new:
                       2:1.2.3-1
                   old:
+              libxv-dev:
+                  ----------
+                  new:
+                      2:1.0.11-1
+                  old:
+              libxv1:
+                  ----------
+                  new:
+                      2:1.0.11-1
+                  old:
+              libxxf86vm-dev:
+                  ----------
+                  new:
+                      1:1.1.4-1+b2
+                  old:
               libxxf86vm1:
                   ----------
                   new:
                       1:1.1.4-1+b2
                   old:
+              linux-libc-dev:
+                  ----------
+                  new:
+                      4.19.132-1
+                  old:
+              m4:
+                  ----------
+                  new:
+                      1.4.18-2
+                  old:
+              make:
+                  ----------
+                  new:
+                      4.2.1-1.2
+                  old:
+              manpages-dev:
+                  ----------
+                  new:
+                      4.16-2
+                  old:
+              mesa-common-dev:
+                  ----------
+                  new:
+                      18.3.6-2+deb10u1
+                  old:
+              mpi-default-bin:
+                  ----------
+                  new:
+                      1.13
+                  old:
+              mpi-default-dev:
+                  ----------
+                  new:
+                      1.13
+                  old:
+              ocl-icd-libopencl1:
+                  ----------
+                  new:
+                      2.2.12-2
+                  old:
+              openmpi-bin:
+                  ----------
+                  new:
+                      3.1.3-11
+                  old:
+              openmpi-common:
+                  ----------
+                  new:
+                      3.1.3-11
+                  old:
+              patch:
+                  ----------
+                  new:
+                      2.7.6-3+deb10u1
+                  old:
+              pkg-config:
+                  ----------
+                  new:
+                      0.29-6
+                  old:
+              python-dev:
+                  ----------
+                  new:
+                      2.7.16-1
+                  old:
+              python2-dev:
+                  ----------
+                  new:
+                      2.7.16-1
+                  old:
+              python2.7-dev:
+                  ----------
+                  new:
+                      2.7.16-2+deb10u1
+                  old:
+              python3-dev:
+                  ----------
+                  new:
+                      3.7.3-1
+                  old:
+              python3-distutils:
+                  ----------
+                  new:
+                      3.7.3-1
+                  old:
+              python3-lib2to3:
+                  ----------
+                  new:
+                      3.7.3-1
+                  old:
+              python3.7:
+                  ----------
+                  new:
+                      3.7.3-2+deb10u2
+                  old:
+                      3.7.3-2+deb10u1
+              python3.7-dev:
+                  ----------
+                  new:
+                      3.7.3-2+deb10u2
+                  old:
+              python3.7-minimal:
+                  ----------
+                  new:
+                      3.7.3-2+deb10u2
+                  old:
+                      3.7.3-2+deb10u1
               shared-mime-info:
                   ----------
                   new:
                       1.10-1
                   old:
-              supertux:
+              subversion:
                   ----------
                   new:
-                      0.6.0-1
+                      1.10.4-1+deb10u1
                   old:
-              supertux-data:
+              uuid-dev:
                   ----------
                   new:
-                      0.6.0-1
+                      2.33.1-0.1
                   old:
               x11-common:
                   ----------
                   new:
                       1:7.7+19
                   old:
+              x11proto-core-dev:
+                  ----------
+                  new:
+                      2018.4-4
+                  old:
+              x11proto-damage-dev:
+                  ----------
+                  new:
+                      1:2018.4-4
+                  old:
+              x11proto-dev:
+                  ----------
+                  new:
+                      2018.4-4
+                  old:
+              x11proto-fixes-dev:
+                  ----------
+                  new:
+                      1:2018.4-4
+                  old:
+              x11proto-input-dev:
+                  ----------
+                  new:
+                      2018.4-4
+                  old:
+              x11proto-randr-dev:
+                  ----------
+                  new:
+                      2018.4-4
+                  old:
+              x11proto-scrnsaver-dev:
+                  ----------
+                  new:
+                      2018.4-4
+                  old:
+              x11proto-xext-dev:
+                  ----------
+                  new:
+                      2018.4-4
+                  old:
+              x11proto-xf86vidmode-dev:
+                  ----------
+                  new:
+                      2018.4-4
+                  old:
+              x11proto-xinerama-dev:
+                  ----------
+                  new:
+                      2018.4-4
+                  old:
               xdg-user-dirs:
                   ----------
                   new:
                       0.17-2
                   old:
-
-Summary for minion
-------------
-Succeeded: 1 (changed=1)
-Failed:    0
-------------
-Total states run:     1
-Total run time: 146.057 s
-root@master:/srv/salt# salt minion state.apply supertux
-minion:
+              xorg-sgml-doctools:
+                  ----------
+                  new:
+                      1:1.11-1
+                  old:
+              xtrans-dev:
+                  ----------
+                  new:
+                      1.3.5-1
+                  old:
+              zlib1g-dev:
+                  ----------
+                  new:
+                      1:1.2.11.dfsg-1
+                  old:
 ----------
-          ID: supertux
-    Function: pkg.installed
+          ID: download_supertux
+    Function: git.latest
+        Name: https://github.com/SuperTux/supertux.git
       Result: True
-     Comment: All specified packages are already installed
-     Started: 16:13:16.682581
-    Duration: 28.148 ms
+     Comment: https://github.com/SuperTux/supertux.git cloned to /usr/games/supertux
+     Started: 07:03:21.890260
+    Duration: 144244.899 ms
      Changes:   
+              ----------
+              new:
+                  https://github.com/SuperTux/supertux.git => /usr/games/supertux
+              revision:
+                  ----------
+                  new:
+                      efaf8f40be75a6d5eb90079c94491f7ef854bfc5
+                  old:
+                      None
+----------
+          ID: download_supertux
+    Function: cmd.run
+        Name: git submodule update --init --recursive
+      Result: True
+     Comment: Command "git submodule update --init --recursive" run
+     Started: 07:05:46.148212
+    Duration: 24432.179 ms
+     Changes:   
+              ----------
+              pid:
+                  15756
+              retcode:
+                  0
+              stderr:
+                  Submodule 'external/SDL_ttf' (https://github.com/SuperTux/SDL_ttf) registered for path 'external/SDL_ttf'
+                  Submodule 'discord-sdk' (https://github.com/discord/discord-rpc) registered for path 'external/discord-sdk'
+                  Submodule 'external/googletest' (https://github.com/google/googletest.git) registered for path 'external/googletest'
+                  Submodule 'external/physfs' (https://github.com/SuperTux/physfs.git) registered for path 'external/physfs'
+                  Submodule 'external/sexp-cpp' (https://github.com/SuperTux/sexp-cpp.git) registered for path 'external/sexp-cpp'
+                  Submodule 'external/squirrel' (https://github.com/albertodemichelis/squirrel.git) registered for path 'external/squirrel'
+                  Submodule 'external/tinygettext' (https://github.com/SuperTux/tinygettext.git) registered for path 'external/tinygettext'
+                  Cloning into '/usr/games/supertux/external/SDL_ttf'...
+                  Cloning into '/usr/games/supertux/external/discord-sdk'...
+                  Cloning into '/usr/games/supertux/external/googletest'...
+                  Cloning into '/usr/games/supertux/external/physfs'...
+                  Cloning into '/usr/games/supertux/external/sexp-cpp'...
+                  Cloning into '/usr/games/supertux/external/squirrel'...
+                  Cloning into '/usr/games/supertux/external/tinygettext'...
+                  Submodule 'external/benchmark' (https://github.com/google/benchmark.git) registered for path 'external/sexp-cpp/external/benchmark'
+                  Submodule 'external/googletest' (https://github.com/google/googletest.git) registered for path 'external/sexp-cpp/external/googletest'
+                  Cloning into '/usr/games/supertux/external/sexp-cpp/external/benchmark'...
+                  Cloning into '/usr/games/supertux/external/sexp-cpp/external/googletest'...
+              stdout:
+                  Submodule path 'external/SDL_ttf': checked out '8324741c73f15f85a1da96d05bb8362c0f57dabd'
+                  Submodule path 'external/discord-sdk': checked out 'e4c0c569eca9b888010ad904d3633e782f5cd680'
+                  Submodule path 'external/googletest': checked out 'a6f06bf2fd3b832822cd4e9e554b7d47f32ec084'
+                  Submodule path 'external/physfs': checked out '36504d7207df8a93e6f36e016c47fbfabb8e1ed8'
+                  Submodule path 'external/sexp-cpp': checked out '6018831abc1e5d5020c7b62f99962806dacf4c9f'
+                  Submodule path 'external/sexp-cpp/external/benchmark': checked out 'e776aa0275e293707b6a0901e0e8d8a8a3679508'
+                  Submodule path 'external/sexp-cpp/external/googletest': checked out '2fe3bd994b3189899d93f1d5a881e725e046fdc2'
+                  Submodule path 'external/squirrel': checked out 'dda695e95f221b5e038796eab1f13d734dbd7270'
+                  Submodule path 'external/tinygettext': checked out '355659015e557749f6b514881c3a35d44d6e5f57'
+----------
+          ID: install_supertux
+    Function: file.directory
+        Name: /usr/games/supertux/build
+      Result: True
+     Comment: Directory /usr/games/supertux/build updated
+     Started: 07:06:10.590514
+    Duration: 15.924 ms
+     Changes:   
+              ----------
+              /usr/games/supertux/build:
+                  New Dir
+----------
+          ID: install_supertux
+    Function: cmd.run
+        Name: cmake ..
+make
+
+      Result: True
+     Comment: Command "cmake ..
+              make
+              " run
+     Started: 07:06:10.607105
+    Duration: 800302.884 ms
+     Changes:   
+              ----------
+              pid:
+                  16116
+              retcode:
+                  0
+              stderr:
+                  no rapidjson, download
+                  In file included from /usr/games/supertux/external/discord-sdk/src/serialization.h:15,
+                                   from /usr/games/supertux/external/discord-sdk/src/rpc_connection.h:4,
+                                   from /usr/games/supertux/external/discord-sdk/src/rpc_connection.cpp:1:
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h: In instantiation of 'void rapidjson::GenericValue<Encoding, Allocator>::SetObjectRaw(rapidjson::GenericValue<Encoding, Allocator>::Member*, rapidjson::SizeType, Allocator&) [with Encoding = rapidjson::UTF8<>; Allocator = rapidjson::MemoryPoolAllocator<>; rapidjson::GenericValue<Encoding, Allocator>::Member = rapidjson::GenericMember<rapidjson::UTF8<>, rapidjson::MemoryPoolAllocator<> >; rapidjson::SizeType = unsigned int]':
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h:2363:9:   required from 'bool rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::EndObject(rapidjson::SizeType) [with Encoding = rapidjson::UTF8<>; Allocator = rapidjson::MemoryPoolAllocator<>; StackAllocator = FixedLinearAllocator<2048>; rapidjson::SizeType = unsigned int]'
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/reader.h:1736:18:   required from 'rapidjson::GenericReader<SourceEncoding, TargetEncoding, StackAllocator>::IterativeParsingState rapidjson::GenericReader<SourceEncoding, TargetEncoding, StackAllocator>::Transit(rapidjson::GenericReader<SourceEncoding, TargetEncoding, StackAllocator>::IterativeParsingState, rapidjson::GenericReader<SourceEncoding, TargetEncoding, StackAllocator>::Token, rapidjson::GenericReader<SourceEncoding, TargetEncoding, StackAllocator>::IterativeParsingState, InputStream&, Handler&) [with unsigned int parseFlags = 1; InputStream = rapidjson::GenericInsituStringStream<rapidjson::UTF8<> >; Handler = rapidjson::GenericDocument<rapidjson::UTF8<>, rapidjson::MemoryPoolAllocator<>, FixedLinearAllocator<2048> >; SourceEncoding = rapidjson::UTF8<>; TargetEncoding = rapidjson::UTF8<>; StackAllocator = FixedLinearAllocator<2048>]'
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/reader.h:1832:58:   required from 'rapidjson::ParseResult rapidjson::GenericReader<SourceEncoding, TargetEncoding, StackAllocator>::IterativeParse(InputStream&, Handler&) [with unsigned int parseFlags = 1; InputStream = rapidjson::GenericInsituStringStream<rapidjson::UTF8<> >; Handler = rapidjson::GenericDocument<rapidjson::UTF8<>, rapidjson::MemoryPoolAllocator<>, FixedLinearAllocator<2048> >; SourceEncoding = rapidjson::UTF8<>; TargetEncoding = rapidjson::UTF8<>; StackAllocator = FixedLinearAllocator<2048>]'
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/reader.h:487:46:   required from 'rapidjson::ParseResult rapidjson::GenericReader<SourceEncoding, TargetEncoding, StackAllocator>::Parse(InputStream&, Handler&) [with unsigned int parseFlags = 1; InputStream = rapidjson::GenericInsituStringStream<rapidjson::UTF8<> >; Handler = rapidjson::GenericDocument<rapidjson::UTF8<>, rapidjson::MemoryPoolAllocator<>, FixedLinearAllocator<2048> >; SourceEncoding = rapidjson::UTF8<>; TargetEncoding = rapidjson::UTF8<>; StackAllocator = FixedLinearAllocator<2048>]'
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h:2159:22:   required from 'rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>& rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::ParseStream(InputStream&) [with unsigned int parseFlags = 1; SourceEncoding = rapidjson::UTF8<>; InputStream = rapidjson::GenericInsituStringStream<rapidjson::UTF8<> >; Encoding = rapidjson::UTF8<>; Allocator = rapidjson::MemoryPoolAllocator<>; StackAllocator = FixedLinearAllocator<2048>]'
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h:2175:62:   required from 'rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>& rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::ParseStream(InputStream&) [with unsigned int parseFlags = 1; InputStream = rapidjson::GenericInsituStringStream<rapidjson::UTF8<> >; Encoding = rapidjson::UTF8<>; Allocator = rapidjson::MemoryPoolAllocator<>; StackAllocator = FixedLinearAllocator<2048>]'
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h:2200:58:   required from 'rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>& rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::ParseInsitu(rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::Ch*) [with unsigned int parseFlags = 0; Encoding = rapidjson::UTF8<>; Allocator = rapidjson::MemoryPoolAllocator<>; StackAllocator = FixedLinearAllocator<2048>; rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::Ch = char]'
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h:2208:47:   required from 'rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>& rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::ParseInsitu(rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::Ch*) [with Encoding = rapidjson::UTF8<>; Allocator = rapidjson::MemoryPoolAllocator<>; StackAllocator = FixedLinearAllocator<2048>; rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::Ch = char]'
+                  /usr/games/supertux/external/discord-sdk/src/rpc_connection.cpp:111:50:   required from here
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h:1952:24: warning: 'void* memcpy(void*, const void*, size_t)' writing to an object of type 'rapidjson::GenericValue<rapidjson::UTF8<> >::Member' {aka 'struct rapidjson::GenericMember<rapidjson::UTF8<>, rapidjson::MemoryPoolAllocator<> >'} with no trivial copy-assignment; use copy-assignment instead [-Wclass-memaccess]
+                               std::memcpy(m, members, count * sizeof(Member));
+                               ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/discord-sdk/src/serialization.h:15,
+                                   from /usr/games/supertux/external/discord-sdk/src/rpc_connection.h:4,
+                                   from /usr/games/supertux/external/discord-sdk/src/rpc_connection.cpp:1:
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h:71:8: note: 'rapidjson::GenericValue<rapidjson::UTF8<> >::Member' {aka 'struct rapidjson::GenericMember<rapidjson::UTF8<>, rapidjson::MemoryPoolAllocator<> >'} declared here
+                   struct GenericMember {
+                          ^~~~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/discord-sdk/src/serialization.h:15,
+                                   from /usr/games/supertux/external/discord-sdk/src/rpc_connection.h:4,
+                                   from /usr/games/supertux/external/discord-sdk/src/rpc_connection.cpp:1:
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h: In instantiation of 'void rapidjson::GenericValue<Encoding, Allocator>::SetArrayRaw(rapidjson::GenericValue<Encoding, Allocator>*, rapidjson::SizeType, Allocator&) [with Encoding = rapidjson::UTF8<>; Allocator = rapidjson::MemoryPoolAllocator<>; rapidjson::SizeType = unsigned int]':
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h:2371:9:   required from 'bool rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::EndArray(rapidjson::SizeType) [with Encoding = rapidjson::UTF8<>; Allocator = rapidjson::MemoryPoolAllocator<>; StackAllocator = FixedLinearAllocator<2048>; rapidjson::SizeType = unsigned int]'
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/reader.h:1766:18:   required from 'rapidjson::GenericReader<SourceEncoding, TargetEncoding, StackAllocator>::IterativeParsingState rapidjson::GenericReader<SourceEncoding, TargetEncoding, StackAllocator>::Transit(rapidjson::GenericReader<SourceEncoding, TargetEncoding, StackAllocator>::IterativeParsingState, rapidjson::GenericReader<SourceEncoding, TargetEncoding, StackAllocator>::Token, rapidjson::GenericReader<SourceEncoding, TargetEncoding, StackAllocator>::IterativeParsingState, InputStream&, Handler&) [with unsigned int parseFlags = 1; InputStream = rapidjson::GenericInsituStringStream<rapidjson::UTF8<> >; Handler = rapidjson::GenericDocument<rapidjson::UTF8<>, rapidjson::MemoryPoolAllocator<>, FixedLinearAllocator<2048> >; SourceEncoding = rapidjson::UTF8<>; TargetEncoding = rapidjson::UTF8<>; StackAllocator = FixedLinearAllocator<2048>]'
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/reader.h:1832:58:   required from 'rapidjson::ParseResult rapidjson::GenericReader<SourceEncoding, TargetEncoding, StackAllocator>::IterativeParse(InputStream&, Handler&) [with unsigned int parseFlags = 1; InputStream = rapidjson::GenericInsituStringStream<rapidjson::UTF8<> >; Handler = rapidjson::GenericDocument<rapidjson::UTF8<>, rapidjson::MemoryPoolAllocator<>, FixedLinearAllocator<2048> >; SourceEncoding = rapidjson::UTF8<>; TargetEncoding = rapidjson::UTF8<>; StackAllocator = FixedLinearAllocator<2048>]'
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/reader.h:487:46:   required from 'rapidjson::ParseResult rapidjson::GenericReader<SourceEncoding, TargetEncoding, StackAllocator>::Parse(InputStream&, Handler&) [with unsigned int parseFlags = 1; InputStream = rapidjson::GenericInsituStringStream<rapidjson::UTF8<> >; Handler = rapidjson::GenericDocument<rapidjson::UTF8<>, rapidjson::MemoryPoolAllocator<>, FixedLinearAllocator<2048> >; SourceEncoding = rapidjson::UTF8<>; TargetEncoding = rapidjson::UTF8<>; StackAllocator = FixedLinearAllocator<2048>]'
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h:2159:22:   required from 'rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>& rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::ParseStream(InputStream&) [with unsigned int parseFlags = 1; SourceEncoding = rapidjson::UTF8<>; InputStream = rapidjson::GenericInsituStringStream<rapidjson::UTF8<> >; Encoding = rapidjson::UTF8<>; Allocator = rapidjson::MemoryPoolAllocator<>; StackAllocator = FixedLinearAllocator<2048>]'
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h:2175:62:   required from 'rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>& rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::ParseStream(InputStream&) [with unsigned int parseFlags = 1; InputStream = rapidjson::GenericInsituStringStream<rapidjson::UTF8<> >; Encoding = rapidjson::UTF8<>; Allocator = rapidjson::MemoryPoolAllocator<>; StackAllocator = FixedLinearAllocator<2048>]'
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h:2200:58:   required from 'rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>& rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::ParseInsitu(rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::Ch*) [with unsigned int parseFlags = 0; Encoding = rapidjson::UTF8<>; Allocator = rapidjson::MemoryPoolAllocator<>; StackAllocator = FixedLinearAllocator<2048>; rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::Ch = char]'
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h:2208:47:   required from 'rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>& rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::ParseInsitu(rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::Ch*) [with Encoding = rapidjson::UTF8<>; Allocator = rapidjson::MemoryPoolAllocator<>; StackAllocator = FixedLinearAllocator<2048>; rapidjson::GenericDocument<Encoding, Allocator, StackAllocator>::Ch = char]'
+                  /usr/games/supertux/external/discord-sdk/src/rpc_connection.cpp:111:50:   required from here
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h:1939:24: warning: 'void* memcpy(void*, const void*, size_t)' writing to an object of type 'class rapidjson::GenericValue<rapidjson::UTF8<> >' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+                               std::memcpy(e, values, count * sizeof(GenericValue));
+                               ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  /usr/games/supertux/external/discord-sdk/thirdparty/rapidjson-1.1.0/include/rapidjson/document.h:540:7: note: 'class rapidjson::GenericValue<rapidjson::UTF8<> >' declared here
+                   class GenericValue {
+                         ^~~~~~~~~~~~
+                  cc1plus: warning: unrecognized command line option '-Wno-global-constructors'
+                  cc1plus: warning: unrecognized command line option '-Wno-exit-time-destructors'
+                  cc1plus: warning: unrecognized command line option '-Wno-covered-switch-default'
+                  cc1plus: warning: unrecognized command line option '-Wno-c++98-compat-pedantic'
+                  cc1plus: warning: unrecognized command line option '-Wno-c++98-compat'
+                  CMake Warning:
+                    Manually-specified variables were not used by the project:
+                  
+                      VCPKG_BUILD
+                  
+                  
+                  cc1plus: warning: -Wabi won't warn about anything [-Wabi]
+                  cc1plus: note: -Wabi warns about differences from the most up-to-date ABI, which is also used by default
+                  cc1plus: note: use e.g. -Wabi=11 to warn about changes from GCC 7
+                  cc1plus: warning: -Wabi won't warn about anything [-Wabi]
+                  cc1plus: note: -Wabi warns about differences from the most up-to-date ABI, which is also used by default
+                  cc1plus: note: use e.g. -Wabi=11 to warn about changes from GCC 7
+                  cc1plus: warning: -Wabi won't warn about anything [-Wabi]
+                  cc1plus: note: -Wabi warns about differences from the most up-to-date ABI, which is also used by default
+                  cc1plus: note: use e.g. -Wabi=11 to warn about changes from GCC 7
+                  cc1plus: warning: -Wabi won't warn about anything [-Wabi]
+                  cc1plus: note: -Wabi warns about differences from the most up-to-date ABI, which is also used by default
+                  cc1plus: note: use e.g. -Wabi=11 to warn about changes from GCC 7
+                  cc1plus: warning: -Wabi won't warn about anything [-Wabi]
+                  cc1plus: note: -Wabi warns about differences from the most up-to-date ABI, which is also used by default
+                  cc1plus: note: use e.g. -Wabi=11 to warn about changes from GCC 7
+                  cc1plus: warning: -Wabi won't warn about anything [-Wabi]
+                  cc1plus: note: -Wabi warns about differences from the most up-to-date ABI, which is also used by default
+                  cc1plus: note: use e.g. -Wabi=11 to warn about changes from GCC 7
+                  cc1plus: warning: -Wabi won't warn about anything [-Wabi]
+                  cc1plus: note: -Wabi warns about differences from the most up-to-date ABI, which is also used by default
+                  cc1plus: note: use e.g. -Wabi=11 to warn about changes from GCC 7
+                  cc1plus: warning: -Wabi won't warn about anything [-Wabi]
+                  cc1plus: note: -Wabi warns about differences from the most up-to-date ABI, which is also used by default
+                  cc1plus: note: use e.g. -Wabi=11 to warn about changes from GCC 7
+                  cc1plus: warning: -Wabi won't warn about anything [-Wabi]
+                  cc1plus: note: -Wabi warns about differences from the most up-to-date ABI, which is also used by default
+                  cc1plus: note: use e.g. -Wabi=11 to warn about changes from GCC 7
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqobject.h:5,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqapi.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h: In instantiation of 'void sqvector<T>::remove(SQUnsignedInteger) [with T = SQObjectPtr; SQUnsignedInteger = long long unsigned int]':
+                  /usr/games/supertux/external/squirrel/squirrel/sqarray.h:83:27:   required from here
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h:97:20: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct SQObjectPtr' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+                               memmove(&_vals[idx], &_vals[idx+1], sizeof(T) * (_size - idx - 1));
+                               ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqapi.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/sqobject.h:205:8: note: 'struct SQObjectPtr' declared here
+                   struct SQObjectPtr : public SQObject
+                          ^~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqobject.h:5,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqbaselib.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h: In instantiation of 'void sqvector<T>::remove(SQUnsignedInteger) [with T = SQObjectPtr; SQUnsignedInteger = long long unsigned int]':
+                  /usr/games/supertux/external/squirrel/squirrel/sqarray.h:83:27:   required from here
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h:97:20: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct SQObjectPtr' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+                               memmove(&_vals[idx], &_vals[idx+1], sizeof(T) * (_size - idx - 1));
+                               ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqbaselib.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/sqobject.h:205:8: note: 'struct SQObjectPtr' declared here
+                   struct SQObjectPtr : public SQObject
+                          ^~~~~~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqcompiler.cpp: In member function 'void SQCompiler::ParseTableOrClass(SQInteger, SQInteger)':
+                  /usr/games/supertux/external/squirrel/squirrel/sqcompiler.cpp:979:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                                   if(separator == ',') { //only works for tables
+                                   ^~
+                  /usr/games/supertux/external/squirrel/squirrel/sqcompiler.cpp:984:13: note: here
+                               default :
+                               ^~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp: In member function 'void SQLexer::LexBlockComment()':
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp:118:37: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                               case SQUIRREL_EOB: Error(_SC("missing \"*/\" in comment"));
+                                                  ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp:119:13: note: here
+                               default: NEXT();
+                               ^~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp: In member function 'SQInteger SQLexer::Lex()':
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp:208:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                               Error(_SC("error parsing the string"));
+                               ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp:210:9: note: here
+                           case _SC('"'):
+                           ^~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp:216:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                               Error(_SC("error parsing the string"));
+                               ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp:218:9: note: here
+                           case _SC('{'): case _SC('}'): case _SC('('): case _SC(')'): case _SC('['): case _SC(']'):
+                           ^~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqobject.h:5,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqobject.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h: In instantiation of 'void sqvector<T>::remove(SQUnsignedInteger) [with T = SQObjectPtr; SQUnsignedInteger = long long unsigned int]':
+                  /usr/games/supertux/external/squirrel/squirrel/sqarray.h:83:27:   required from here
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h:97:20: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct SQObjectPtr' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+                               memmove(&_vals[idx], &_vals[idx+1], sizeof(T) * (_size - idx - 1));
+                               ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqobject.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/sqobject.h:205:8: note: 'struct SQObjectPtr' declared here
+                   struct SQObjectPtr : public SQObject
+                          ^~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqobject.h:5,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqstate.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h: In instantiation of 'void sqvector<T>::remove(SQUnsignedInteger) [with T = SQObjectPtr; SQUnsignedInteger = long long unsigned int]':
+                  /usr/games/supertux/external/squirrel/squirrel/sqarray.h:83:27:   required from here
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h:97:20: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct SQObjectPtr' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+                               memmove(&_vals[idx], &_vals[idx+1], sizeof(T) * (_size - idx - 1));
+                               ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqstate.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/sqobject.h:205:8: note: 'struct SQObjectPtr' declared here
+                   struct SQObjectPtr : public SQObject
+                          ^~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqobject.h:5,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h: In instantiation of 'void sqvector<T>::remove(SQUnsignedInteger) [with T = SQObjectPtr; SQUnsignedInteger = long long unsigned int]':
+                  /usr/games/supertux/external/squirrel/squirrel/sqarray.h:83:27:   required from here
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h:97:20: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct SQObjectPtr' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+                               memmove(&_vals[idx], &_vals[idx+1], sizeof(T) * (_size - idx - 1));
+                               ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/sqobject.h:205:8: note: 'struct SQObjectPtr' declared here
+                   struct SQObjectPtr : public SQObject
+                          ^~~~~~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp: In member function 'bool SQVM::ObjCmp(const SQObjectPtr&, const SQObjectPtr&, SQInteger&)':
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:236:13: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                               }
+                               ^
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:238:9: note: here
+                           default:
+                           ^~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp: In member function 'bool SQVM::ToString(const SQObjectPtr&, SQObjectPtr&)':
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:314:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                           }
+                           ^
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:315:5: note: here
+                       default:
+                       ^~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp: In member function 'bool SQVM::FOREACH_OP(SQObjectPtr&, SQObjectPtr&, SQObjectPtr&, SQObjectPtr&, SQInteger, int, int&)':
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:571:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                           }
+                           ^
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:572:5: note: here
+                       default:
+                       ^~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp: In member function 'bool SQVM::Execute(SQObjectPtr&, SQInteger, SQInteger, SQObjectPtr&, SQBool, SQVM::ExecutionType)':
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:797:25: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                                           }
+                                           ^
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:802:21: note: here
+                                       default:
+                                       ^~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:737:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                                   }
+                                   ^
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:739:13: note: here
+                               case _OP_CALL: {
+                               ^~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp: In member function 'SQInteger SQVM::FallBackGet(const SQObjectPtr&, const SQObjectPtr&, SQObjectPtr&)':
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:1313:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                           if(_delegable(self)->_delegate) {
+                           ^~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:1320:5: note: here
+                       case OT_INSTANCE: {
+                       ^~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp: In member function 'SQInteger SQVM::FallBackSet(const SQObjectPtr&, const SQObjectPtr&, const SQObjectPtr&)':
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:1384:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                           if(_table(self)->_delegate) {
+                           ^~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:1388:5: note: here
+                       case OT_INSTANCE:
+                       ^~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqobject.h:5,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqapi.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h: In instantiation of 'void sqvector<T>::remove(SQUnsignedInteger) [with T = SQObjectPtr; SQUnsignedInteger = long long unsigned int]':
+                  /usr/games/supertux/external/squirrel/squirrel/sqarray.h:83:27:   required from here
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h:97:20: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct SQObjectPtr' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+                               memmove(&_vals[idx], &_vals[idx+1], sizeof(T) * (_size - idx - 1));
+                               ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqapi.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/sqobject.h:205:8: note: 'struct SQObjectPtr' declared here
+                   struct SQObjectPtr : public SQObject
+                          ^~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqobject.h:5,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqbaselib.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h: In instantiation of 'void sqvector<T>::remove(SQUnsignedInteger) [with T = SQObjectPtr; SQUnsignedInteger = long long unsigned int]':
+                  /usr/games/supertux/external/squirrel/squirrel/sqarray.h:83:27:   required from here
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h:97:20: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct SQObjectPtr' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+                               memmove(&_vals[idx], &_vals[idx+1], sizeof(T) * (_size - idx - 1));
+                               ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqbaselib.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/sqobject.h:205:8: note: 'struct SQObjectPtr' declared here
+                   struct SQObjectPtr : public SQObject
+                          ^~~~~~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqcompiler.cpp: In member function 'void SQCompiler::ParseTableOrClass(SQInteger, SQInteger)':
+                  /usr/games/supertux/external/squirrel/squirrel/sqcompiler.cpp:979:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                                   if(separator == ',') { //only works for tables
+                                   ^~
+                  /usr/games/supertux/external/squirrel/squirrel/sqcompiler.cpp:984:13: note: here
+                               default :
+                               ^~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp: In member function 'void SQLexer::LexBlockComment()':
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp:118:37: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                               case SQUIRREL_EOB: Error(_SC("missing \"*/\" in comment"));
+                                                  ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp:119:13: note: here
+                               default: NEXT();
+                               ^~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp: In member function 'SQInteger SQLexer::Lex()':
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp:208:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                               Error(_SC("error parsing the string"));
+                               ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp:210:9: note: here
+                           case _SC('"'):
+                           ^~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp:216:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                               Error(_SC("error parsing the string"));
+                               ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqlexer.cpp:218:9: note: here
+                           case _SC('{'): case _SC('}'): case _SC('('): case _SC(')'): case _SC('['): case _SC(']'):
+                           ^~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqobject.h:5,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqobject.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h: In instantiation of 'void sqvector<T>::remove(SQUnsignedInteger) [with T = SQObjectPtr; SQUnsignedInteger = long long unsigned int]':
+                  /usr/games/supertux/external/squirrel/squirrel/sqarray.h:83:27:   required from here
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h:97:20: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct SQObjectPtr' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+                               memmove(&_vals[idx], &_vals[idx+1], sizeof(T) * (_size - idx - 1));
+                               ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqobject.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/sqobject.h:205:8: note: 'struct SQObjectPtr' declared here
+                   struct SQObjectPtr : public SQObject
+                          ^~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqobject.h:5,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqstate.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h: In instantiation of 'void sqvector<T>::remove(SQUnsignedInteger) [with T = SQObjectPtr; SQUnsignedInteger = long long unsigned int]':
+                  /usr/games/supertux/external/squirrel/squirrel/sqarray.h:83:27:   required from here
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h:97:20: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct SQObjectPtr' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+                               memmove(&_vals[idx], &_vals[idx+1], sizeof(T) * (_size - idx - 1));
+                               ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqstate.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/sqobject.h:205:8: note: 'struct SQObjectPtr' declared here
+                   struct SQObjectPtr : public SQObject
+                          ^~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqobject.h:5,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h: In instantiation of 'void sqvector<T>::remove(SQUnsignedInteger) [with T = SQObjectPtr; SQUnsignedInteger = long long unsigned int]':
+                  /usr/games/supertux/external/squirrel/squirrel/sqarray.h:83:27:   required from here
+                  /usr/games/supertux/external/squirrel/squirrel/squtils.h:97:20: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct SQObjectPtr' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+                               memmove(&_vals[idx], &_vals[idx+1], sizeof(T) * (_size - idx - 1));
+                               ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/squirrel/sqpcheader.h:17,
+                                   from /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:4:
+                  /usr/games/supertux/external/squirrel/squirrel/sqobject.h:205:8: note: 'struct SQObjectPtr' declared here
+                   struct SQObjectPtr : public SQObject
+                          ^~~~~~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp: In member function 'bool SQVM::ObjCmp(const SQObjectPtr&, const SQObjectPtr&, SQInteger&)':
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:236:13: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                               }
+                               ^
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:238:9: note: here
+                           default:
+                           ^~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp: In member function 'bool SQVM::ToString(const SQObjectPtr&, SQObjectPtr&)':
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:314:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                           }
+                           ^
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:315:5: note: here
+                       default:
+                       ^~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp: In member function 'bool SQVM::FOREACH_OP(SQObjectPtr&, SQObjectPtr&, SQObjectPtr&, SQObjectPtr&, SQInteger, int, int&)':
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:571:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                           }
+                           ^
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:572:5: note: here
+                       default:
+                       ^~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp: In member function 'bool SQVM::Execute(SQObjectPtr&, SQInteger, SQInteger, SQObjectPtr&, SQBool, SQVM::ExecutionType)':
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:797:25: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                                           }
+                                           ^
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:802:21: note: here
+                                       default:
+                                       ^~~~~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:737:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                                   }
+                                   ^
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:739:13: note: here
+                               case _OP_CALL: {
+                               ^~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp: In member function 'SQInteger SQVM::FallBackGet(const SQObjectPtr&, const SQObjectPtr&, SQObjectPtr&)':
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:1313:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                           if(_delegable(self)->_delegate) {
+                           ^~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:1320:5: note: here
+                       case OT_INSTANCE: {
+                       ^~~~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp: In member function 'SQInteger SQVM::FallBackSet(const SQObjectPtr&, const SQObjectPtr&, const SQObjectPtr&)':
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:1384:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                           if(_table(self)->_delegate) {
+                           ^~
+                  /usr/games/supertux/external/squirrel/squirrel/sqvm.cpp:1388:5: note: here
+                       case OT_INSTANCE:
+                       ^~~~
+                  /usr/games/supertux/external/squirrel/sqstdlib/sqstdrex.cpp: In function 'SQInteger sqstd_rex_charnode(SQRex*, SQBool)':
+                  /usr/games/supertux/external/squirrel/sqstdlib/sqstdrex.cpp:166:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                                   } //else default
+                                   ^
+                  /usr/games/supertux/external/squirrel/sqstdlib/sqstdrex.cpp:167:13: note: here
+                               default:
+                               ^~~~~~~
+                  /usr/games/supertux/external/squirrel/sqstdlib/sqstdstring.cpp: In function 'SQRESULT sqstd_format(HSQUIRRELVM, SQInteger, SQInteger*, SQChar**)':
+                  /usr/games/supertux/external/squirrel/sqstdlib/sqstdstring.cpp:121:29: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                                   fmt[fpos++] = _SC('\0');
+                                               ^
+                  /usr/games/supertux/external/squirrel/sqstdlib/sqstdstring.cpp:124:13: note: here
+                               case 'c':
+                               ^~~~
+                  /usr/games/supertux/external/squirrel/sqstdlib/sqstdrex.cpp: In function 'SQInteger sqstd_rex_charnode(SQRex*, SQBool)':
+                  /usr/games/supertux/external/squirrel/sqstdlib/sqstdrex.cpp:166:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                                   } //else default
+                                   ^
+                  /usr/games/supertux/external/squirrel/sqstdlib/sqstdrex.cpp:167:13: note: here
+                               default:
+                               ^~~~~~~
+                  /usr/games/supertux/external/squirrel/sqstdlib/sqstdstring.cpp: In function 'SQRESULT sqstd_format(HSQUIRRELVM, SQInteger, SQInteger*, SQChar**)':
+                  /usr/games/supertux/external/squirrel/sqstdlib/sqstdstring.cpp:121:29: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                                   fmt[fpos++] = _SC('\0');
+                                               ^
+                  /usr/games/supertux/external/squirrel/sqstdlib/sqstdstring.cpp:124:13: note: here
+                               case 'c':
+                               ^~~~
+                  In file included from /usr/games/supertux/external/squirrel/include/squirrel.h:66,
+                                   from /usr/games/supertux/external/squirrel/sq/sq.c:12:
+                  /usr/games/supertux/external/squirrel/sq/sq.c: In function 'Interactive':
+                  /usr/games/supertux/external/squirrel/sq/sq.c:279:73: warning: '%s' directive output may be truncated writing up to 1023 bytes into a region of size 1016 [-Wformat-truncation=]
+                               scsprintf(sq_getscratchpad(v,MAXINPUT),(size_t)MAXINPUT,_SC("return (%s)"),&buffer[1]);
+                                                                                           ^~~~~~~~~~~~~
+                  /usr/games/supertux/external/squirrel/include/sqconfig.h:106:16: note: in definition of macro '_SC'
+                   #define _SC(a) a
+                                  ^
+                  /usr/games/supertux/external/squirrel/include/sqconfig.h:111:21: note: 'snprintf' output between 10 and 1033 bytes into a destination of size 1024
+                   #define scsprintf   snprintf
+                  /usr/games/supertux/external/squirrel/sq/sq.c:279:13: note: in expansion of macro 'scsprintf'
+                               scsprintf(sq_getscratchpad(v,MAXINPUT),(size_t)MAXINPUT,_SC("return (%s)"),&buffer[1]);
+                               ^~~~~~~~~
+                  In file included from /usr/games/supertux/external/squirrel/include/squirrel.h:66,
+                                   from /usr/games/supertux/external/squirrel/sq/sq.c:12:
+                  /usr/games/supertux/external/squirrel/sq/sq.c: In function 'Interactive':
+                  /usr/games/supertux/external/squirrel/sq/sq.c:279:73: warning: '%s' directive output may be truncated writing up to 1023 bytes into a region of size 1016 [-Wformat-truncation=]
+                               scsprintf(sq_getscratchpad(v,MAXINPUT),(size_t)MAXINPUT,_SC("return (%s)"),&buffer[1]);
+                                                                                           ^~~~~~~~~~~~~
+                  /usr/games/supertux/external/squirrel/include/sqconfig.h:106:16: note: in definition of macro '_SC'
+                   #define _SC(a) a
+                                  ^
+                  /usr/games/supertux/external/squirrel/include/sqconfig.h:111:21: note: 'snprintf' output between 10 and 1033 bytes into a destination of size 1024
+                   #define scsprintf   snprintf
+                  /usr/games/supertux/external/squirrel/sq/sq.c:279:13: note: in expansion of macro 'scsprintf'
+                               scsprintf(sq_getscratchpad(v,MAXINPUT),(size_t)MAXINPUT,_SC("return (%s)"),&buffer[1]);
+                               ^~~~~~~~~
+                  CMake Warning:
+                    Manually-specified variables were not used by the project:
+                  
+                      RAQM_INCLUDE_DIR
+                      RAQM_LIBRARIES
+              stdout:
+                  -- The C compiler identification is GNU 8.3.0
+                  -- The CXX compiler identification is GNU 8.3.0
+                  -- Check for working C compiler: /usr/bin/cc
+                  -- Check for working C compiler: /usr/bin/cc -- works
+                  -- Detecting C compiler ABI info
+                  -- Detecting C compiler ABI info - done
+                  -- Detecting C compile features
+                  -- Detecting C compile features - done
+                  -- Check for working CXX compiler: /usr/bin/c++
+                  -- Check for working CXX compiler: /usr/bin/c++ -- works
+                  -- Detecting CXX compiler ABI info
+                  -- Detecting CXX compiler ABI info - done
+                  -- Detecting CXX compile features
+                  -- Detecting CXX compile features - done
+                  -- Check if the system is big endian
+                  -- Searching 16 bit integer
+                  -- Looking for sys/types.h
+                  -- Looking for sys/types.h - found
+                  -- Looking for stdint.h
+                  -- Looking for stdint.h - found
+                  -- Looking for stddef.h
+                  -- Looking for stddef.h - found
+                  -- Check size of unsigned short
+                  -- Check size of unsigned short - done
+                  -- Using unsigned short
+                  -- Check if the system is big endian - little endian
+                  -- Boost version: 1.67.0
+                  -- Found the following Boost libraries:
+                  --   filesystem
+                  --   system
+                  --   date_time
+                  --   locale
+                  -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") 
+                  -- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.36") 
+                  -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29") 
+                  -- Checking for one of the modules 'sdl2>=2.0.1'
+                  -- Checking for one of the modules 'SDL2_image>=2.0.0'
+                  -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+                  -- Found GLEW: /usr/include  
+                  -- Found OpenAL: /usr/lib/x86_64-linux-gnu/libopenal.so  
+                  -- Looking for vorbis_bitrate_addblock in vorbis
+                  -- Looking for vorbis_bitrate_addblock in vorbis - found
+                  -- Found OggVorbis: /usr/lib/x86_64-linux-gnu/libvorbisfile.so;/usr/lib/x86_64-linux-gnu/libvorbis.so;/usr/lib/x86_64-linux-gnu/libogg.so
+                  -- Found PhysFS: /usr/lib/x86_64-linux-gnu/libphysfs.so  
+                  -- Looking for PHYSFS_getPrefDir
+                  -- Looking for PHYSFS_getPrefDir - found
+                  -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.64.0") 
+                  -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+                  -- Performing Test HAVE_ICONV_CONST
+                  -- Performing Test HAVE_ICONV_CONST - Failed
+                  -- Check size of void*
+                  -- Check size of void* - done
+                  -- Size of void* is 8
+                  -- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.9.1") 
+                  -- Checking for module 'raqm'
+                  --   No package 'raqm' found
+                  -- Could NOT find RAQM (missing: RAQM_INCLUDE_DIR RAQM_LIBRARY) 
+                  -- Discord WILL be compiled. To disable Discord, pass -DENABLE_DISCORD=Off
+                  -- Configuring done
+                  -- Generating done
+                  -- Build files have been written to: /usr/games/supertux/build
+                  Scanning dependencies of target discord-rpc
+                  [  0%] Building CXX object external/discord-sdk/src/CMakeFiles/discord-rpc.dir/discord_rpc.cpp.o
+                  [  1%] Building CXX object external/discord-sdk/src/CMakeFiles/discord-rpc.dir/rpc_connection.cpp.o
+                  [  1%] Building CXX object external/discord-sdk/src/CMakeFiles/discord-rpc.dir/serialization.cpp.o
+                  [  1%] Building CXX object external/discord-sdk/src/CMakeFiles/discord-rpc.dir/connection_unix.cpp.o
+                  [  1%] Building CXX object external/discord-sdk/src/CMakeFiles/discord-rpc.dir/discord_register_linux.cpp.o
+                  [  1%] Linking CXX static library libdiscord-rpc.a
+                  [  1%] Built target discord-rpc
+                  Scanning dependencies of target sexp
+                  [  2%] Building CXX object CMakeFiles/sexp.dir/external/sexp-cpp/src/float.cpp.o
+                  [  2%] Building CXX object CMakeFiles/sexp.dir/external/sexp-cpp/src/io.cpp.o
+                  [  2%] Building CXX object CMakeFiles/sexp.dir/external/sexp-cpp/src/lexer.cpp.o
+                  [  2%] Building CXX object CMakeFiles/sexp.dir/external/sexp-cpp/src/parser.cpp.o
+                  [  2%] Building CXX object CMakeFiles/sexp.dir/external/sexp-cpp/src/util.cpp.o
+                  [  3%] Building CXX object CMakeFiles/sexp.dir/external/sexp-cpp/src/value.cpp.o
+                  [  3%] Linking CXX static library libsexp.a
+                  [  3%] Built target sexp
+                  Scanning dependencies of target savepng
+                  [  4%] Building C object CMakeFiles/savepng.dir/external/SDL_SavePNG/savepng.c.o
+                  [  4%] Linking C static library libsavepng.a
+                  [  4%] Built target savepng
+                  Scanning dependencies of target supertux2_c
+                  [  4%] Building C object CMakeFiles/supertux2_c.dir/external/findlocale/findlocale.c.o
+                  [  4%] Building C object CMakeFiles/supertux2_c.dir/external/obstack/obstack.c.o
+                  [  4%] Built target supertux2_c
+                  Scanning dependencies of target tinygettext
+                  [  4%] Creating directories for 'tinygettext'
+                  [  5%] No download step for 'tinygettext'
+                  [  5%] No patch step for 'tinygettext'
+                  [  5%] No update step for 'tinygettext'
+                  [  5%] Performing configure step for 'tinygettext'
+                  -- The C compiler identification is GNU 8.3.0
+                  -- The CXX compiler identification is GNU 8.3.0
+                  -- Check for working C compiler: /usr/bin/cc
+                  -- Check for working C compiler: /usr/bin/cc -- works
+                  -- Detecting C compiler ABI info
+                  -- Detecting C compiler ABI info - done
+                  -- Detecting C compile features
+                  -- Detecting C compile features - done
+                  -- Check for working CXX compiler: /usr/bin/c++
+                  -- Check for working CXX compiler: /usr/bin/c++ -- works
+                  -- Detecting CXX compiler ABI info
+                  -- Detecting CXX compiler ABI info - done
+                  -- Detecting CXX compile features
+                  -- Detecting CXX compile features - done
+                  -- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+                  -- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+                  -- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+                  -- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+                  -- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+                  -- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+                  -- Performing Test STD_C__0X_CXX_FLAG_FOUND
+                  -- Performing Test STD_C__0X_CXX_FLAG_FOUND - Success
+                  -- Performing Test O3_CXX_FLAG_FOUND
+                  -- Performing Test O3_CXX_FLAG_FOUND - Success
+                  -- Performing Test WALL_CXX_FLAG_FOUND
+                  -- Performing Test WALL_CXX_FLAG_FOUND - Success
+                  -- Performing Test WEXTRA_CXX_FLAG_FOUND
+                  -- Performing Test WEXTRA_CXX_FLAG_FOUND - Success
+                  -- Performing Test WEFFC___CXX_FLAG_FOUND
+                  -- Performing Test WEFFC___CXX_FLAG_FOUND - Success
+                  -- Performing Test PEDANTIC_CXX_FLAG_FOUND
+                  -- Performing Test PEDANTIC_CXX_FLAG_FOUND - Success
+                  -- Performing Test WABI_CXX_FLAG_FOUND
+                  -- Performing Test WABI_CXX_FLAG_FOUND - Success
+                  -- Performing Test WCTOR_DTOR_PRIVACY_CXX_FLAG_FOUND
+                  -- Performing Test WCTOR_DTOR_PRIVACY_CXX_FLAG_FOUND - Success
+                  -- Performing Test WOLD_STYLE_CAST_CXX_FLAG_FOUND
+                  -- Performing Test WOLD_STYLE_CAST_CXX_FLAG_FOUND - Success
+                  -- Performing Test WOVERLOADED_VIRTUAL_CXX_FLAG_FOUND
+                  -- Performing Test WOVERLOADED_VIRTUAL_CXX_FLAG_FOUND - Success
+                  -- Performing Test WSIGN_PROMO_CXX_FLAG_FOUND
+                  -- Performing Test WSIGN_PROMO_CXX_FLAG_FOUND - Success
+                  -- Performing Test WSWITCH_ENUM_CXX_FLAG_FOUND
+                  -- Performing Test WSWITCH_ENUM_CXX_FLAG_FOUND - Success
+                  -- Performing Test WCAST_ALIGN_CXX_FLAG_FOUND
+                  -- Performing Test WCAST_ALIGN_CXX_FLAG_FOUND - Success
+                  -- Performing Test WCAST_QUAL_CXX_FLAG_FOUND
+                  -- Performing Test WCAST_QUAL_CXX_FLAG_FOUND - Success
+                  -- Performing Test WDISABLED_OPTIMIZATION_CXX_FLAG_FOUND
+                  -- Performing Test WDISABLED_OPTIMIZATION_CXX_FLAG_FOUND - Success
+                  -- Performing Test WFLOAT_EQUAL_CXX_FLAG_FOUND
+                  -- Performing Test WFLOAT_EQUAL_CXX_FLAG_FOUND - Success
+                  -- Performing Test WFORMAT_2_CXX_FLAG_FOUND
+                  -- Performing Test WFORMAT_2_CXX_FLAG_FOUND - Success
+                  -- Performing Test WINIT_SELF_CXX_FLAG_FOUND
+                  -- Performing Test WINIT_SELF_CXX_FLAG_FOUND - Success
+                  -- Performing Test WINVALID_PCH_CXX_FLAG_FOUND
+                  -- Performing Test WINVALID_PCH_CXX_FLAG_FOUND - Success
+                  -- Performing Test WMISSING_FORMAT_ATTRIBUTE_CXX_FLAG_FOUND
+                  -- Performing Test WMISSING_FORMAT_ATTRIBUTE_CXX_FLAG_FOUND - Success
+                  -- Performing Test WMISSING_INCLUDE_DIRS_CXX_FLAG_FOUND
+                  -- Performing Test WMISSING_INCLUDE_DIRS_CXX_FLAG_FOUND - Success
+                  -- Performing Test WMISSING_NORETURN_CXX_FLAG_FOUND
+                  -- Performing Test WMISSING_NORETURN_CXX_FLAG_FOUND - Success
+                  -- Performing Test WPACKED_CXX_FLAG_FOUND
+                  -- Performing Test WPACKED_CXX_FLAG_FOUND - Success
+                  -- Performing Test WSHADOW_CXX_FLAG_FOUND
+                  -- Performing Test WSHADOW_CXX_FLAG_FOUND - Success
+                  -- Performing Test WSIGN_CONVERSION_CXX_FLAG_FOUND
+                  -- Performing Test WSIGN_CONVERSION_CXX_FLAG_FOUND - Success
+                  -- Performing Test WSTACK_PROTECTOR_CXX_FLAG_FOUND
+                  -- Performing Test WSTACK_PROTECTOR_CXX_FLAG_FOUND - Success
+                  -- Performing Test WSTRICT_OVERFLOW_5_CXX_FLAG_FOUND
+                  -- Performing Test WSTRICT_OVERFLOW_5_CXX_FLAG_FOUND - Success
+                  -- Performing Test WSWITCH_DEFAULT_CXX_FLAG_FOUND
+                  -- Performing Test WSWITCH_DEFAULT_CXX_FLAG_FOUND - Success
+                  -- Performing Test WUNDEF_CXX_FLAG_FOUND
+                  -- Performing Test WUNDEF_CXX_FLAG_FOUND - Success
+                  -- Performing Test WCONVERSION_CXX_FLAG_FOUND
+                  -- Performing Test WCONVERSION_CXX_FLAG_FOUND - Success
+                  -- Performing Test WSTRICT_NULL_SENTINEL_CXX_FLAG_FOUND
+                  -- Performing Test WSTRICT_NULL_SENTINEL_CXX_FLAG_FOUND - Success
+                  -- Performing Test WLOGICAL_OP_CXX_FLAG_FOUND
+                  -- Performing Test WLOGICAL_OP_CXX_FLAG_FOUND - Success
+                  -- Performing Test WUNSAFE_LOOP_OPTIMIZATIONS_CXX_FLAG_FOUND
+                  -- Performing Test WUNSAFE_LOOP_OPTIMIZATIONS_CXX_FLAG_FOUND - Success
+                  -- Configuring done
+                  -- Generating done
+                  -- Build files have been written to: /usr/games/supertux/build/tinygettext-prefix/src/tinygettext-build
+                  [  6%] Performing build step for 'tinygettext'
+                  Scanning dependencies of target tinygettext
+                  [ 10%] Building CXX object CMakeFiles/tinygettext.dir/src/dictionary.o
+                  [ 20%] Building CXX object CMakeFiles/tinygettext.dir/src/dictionary_manager.o
+                  [ 30%] Building CXX object CMakeFiles/tinygettext.dir/src/iconv.o
+                  [ 40%] Building CXX object CMakeFiles/tinygettext.dir/src/language.o
+                  [ 50%] Building CXX object CMakeFiles/tinygettext.dir/src/log.o
+                  [ 60%] Building CXX object CMakeFiles/tinygettext.dir/src/plural_forms.o
+                  [ 70%] Building CXX object CMakeFiles/tinygettext.dir/src/po_parser.o
+                  [ 80%] Building CXX object CMakeFiles/tinygettext.dir/src/tinygettext.o
+                  [ 90%] Building CXX object CMakeFiles/tinygettext.dir/src/unix_file_system.o
+                  [100%] Linking CXX static library libtinygettext.a
+                  [100%] Built target tinygettext
+                  [  6%] Performing install step for 'tinygettext'
+                  [100%] Built target tinygettext
+                  Install the project...
+                  -- Install configuration: ""
+                  -- Installing: /usr/games/supertux/build/tinygettext/lib/libtinygettext.a
+                  -- Installing: /usr/games/supertux/build/tinygettext/include/tinygettext/dictionary.hpp
+                  -- Installing: /usr/games/supertux/build/tinygettext/include/tinygettext/dictionary_manager.hpp
+                  -- Installing: /usr/games/supertux/build/tinygettext/include/tinygettext/file_system.hpp
+                  -- Installing: /usr/games/supertux/build/tinygettext/include/tinygettext/iconv.hpp
+                  -- Installing: /usr/games/supertux/build/tinygettext/include/tinygettext/language.hpp
+                  -- Installing: /usr/games/supertux/build/tinygettext/include/tinygettext/log.hpp
+                  -- Installing: /usr/games/supertux/build/tinygettext/include/tinygettext/log_stream.hpp
+                  -- Installing: /usr/games/supertux/build/tinygettext/include/tinygettext/plural_forms.hpp
+                  -- Installing: /usr/games/supertux/build/tinygettext/include/tinygettext/po_parser.hpp
+                  -- Installing: /usr/games/supertux/build/tinygettext/include/tinygettext/tinygettext.hpp
+                  -- Installing: /usr/games/supertux/build/tinygettext/include/tinygettext/unix_file_system.hpp
+                  -- Installing: /usr/games/supertux/build/tinygettext/include/tinygettext/tinygettext_Export.h
+                  -- Installing: /usr/games/supertux/build/tinygettext/lib/pkgconfig/tinygettext.pc
+                  [  6%] Completed 'tinygettext'
+                  [  6%] Built target tinygettext
+                  Scanning dependencies of target squirrel
+                  [  6%] Creating directories for 'squirrel'
+                  [  7%] No download step for 'squirrel'
+                  [  7%] No patch step for 'squirrel'
+                  [  7%] No update step for 'squirrel'
+                  [  7%] Performing configure step for 'squirrel'
+                  -- The C compiler identification is GNU 8.3.0
+                  -- The CXX compiler identification is GNU 8.3.0
+                  -- Check for working C compiler: /usr/bin/cc
+                  -- Check for working C compiler: /usr/bin/cc -- works
+                  -- Detecting C compiler ABI info
+                  -- Detecting C compiler ABI info - done
+                  -- Detecting C compile features
+                  -- Detecting C compile features - done
+                  -- Check for working CXX compiler: /usr/bin/c++
+                  -- Check for working CXX compiler: /usr/bin/c++ -- works
+                  -- Detecting CXX compiler ABI info
+                  -- Detecting CXX compiler ABI info - done
+                  -- Detecting CXX compile features
+                  -- Detecting CXX compile features - done
+                  -- Configuring done
+                  -- Generating done
+                  -- Build files have been written to: /usr/games/supertux/build/squirrel-prefix/src/squirrel-build
+                  [  7%] Performing build step for 'squirrel'
+                  Scanning dependencies of target squirrel_static
+                  [  2%] Building CXX object squirrel/CMakeFiles/squirrel_static.dir/sqapi.cpp.o
+                  [  4%] Building CXX object squirrel/CMakeFiles/squirrel_static.dir/sqbaselib.cpp.o
+                  [  6%] Building CXX object squirrel/CMakeFiles/squirrel_static.dir/sqclass.cpp.o
+                  [  8%] Building CXX object squirrel/CMakeFiles/squirrel_static.dir/sqcompiler.cpp.o
+                  [ 10%] Building CXX object squirrel/CMakeFiles/squirrel_static.dir/sqdebug.cpp.o
+                  [ 12%] Building CXX object squirrel/CMakeFiles/squirrel_static.dir/sqfuncstate.cpp.o
+                  [ 14%] Building CXX object squirrel/CMakeFiles/squirrel_static.dir/sqlexer.cpp.o
+                  [ 16%] Building CXX object squirrel/CMakeFiles/squirrel_static.dir/sqmem.cpp.o
+                  [ 18%] Building CXX object squirrel/CMakeFiles/squirrel_static.dir/sqobject.cpp.o
+                  [ 20%] Building CXX object squirrel/CMakeFiles/squirrel_static.dir/sqstate.cpp.o
+                  [ 22%] Building CXX object squirrel/CMakeFiles/squirrel_static.dir/sqtable.cpp.o
+                  [ 25%] Building CXX object squirrel/CMakeFiles/squirrel_static.dir/sqvm.cpp.o
+                  [ 27%] Linking CXX static library libsquirrel_static.a
+                  [ 27%] Built target squirrel_static
+                  Scanning dependencies of target squirrel
+                  [ 29%] Building CXX object squirrel/CMakeFiles/squirrel.dir/sqapi.cpp.o
+                  [ 31%] Building CXX object squirrel/CMakeFiles/squirrel.dir/sqbaselib.cpp.o
+                  [ 33%] Building CXX object squirrel/CMakeFiles/squirrel.dir/sqclass.cpp.o
+                  [ 35%] Building CXX object squirrel/CMakeFiles/squirrel.dir/sqcompiler.cpp.o
+                  [ 37%] Building CXX object squirrel/CMakeFiles/squirrel.dir/sqdebug.cpp.o
+                  [ 39%] Building CXX object squirrel/CMakeFiles/squirrel.dir/sqfuncstate.cpp.o
+                  [ 41%] Building CXX object squirrel/CMakeFiles/squirrel.dir/sqlexer.cpp.o
+                  [ 43%] Building CXX object squirrel/CMakeFiles/squirrel.dir/sqmem.cpp.o
+                  [ 45%] Building CXX object squirrel/CMakeFiles/squirrel.dir/sqobject.cpp.o
+                  [ 47%] Building CXX object squirrel/CMakeFiles/squirrel.dir/sqstate.cpp.o
+                  [ 50%] Building CXX object squirrel/CMakeFiles/squirrel.dir/sqtable.cpp.o
+                  [ 52%] Building CXX object squirrel/CMakeFiles/squirrel.dir/sqvm.cpp.o
+                  [ 54%] Linking CXX shared library libsquirrel.so
+                  [ 54%] Built target squirrel
+                  Scanning dependencies of target sqstdlib
+                  [ 56%] Building CXX object sqstdlib/CMakeFiles/sqstdlib.dir/sqstdaux.cpp.o
+                  [ 58%] Building CXX object sqstdlib/CMakeFiles/sqstdlib.dir/sqstdblob.cpp.o
+                  [ 60%] Building CXX object sqstdlib/CMakeFiles/sqstdlib.dir/sqstdio.cpp.o
+                  [ 62%] Building CXX object sqstdlib/CMakeFiles/sqstdlib.dir/sqstdmath.cpp.o
+                  [ 64%] Building CXX object sqstdlib/CMakeFiles/sqstdlib.dir/sqstdrex.cpp.o
+                  [ 66%] Building CXX object sqstdlib/CMakeFiles/sqstdlib.dir/sqstdstream.cpp.o
+                  [ 68%] Building CXX object sqstdlib/CMakeFiles/sqstdlib.dir/sqstdstring.cpp.o
+                  [ 70%] Building CXX object sqstdlib/CMakeFiles/sqstdlib.dir/sqstdsystem.cpp.o
+                  [ 72%] Linking CXX shared library libsqstdlib.so
+                  [ 72%] Built target sqstdlib
+                  Scanning dependencies of target sqstdlib_static
+                  [ 75%] Building CXX object sqstdlib/CMakeFiles/sqstdlib_static.dir/sqstdaux.cpp.o
+                  [ 77%] Building CXX object sqstdlib/CMakeFiles/sqstdlib_static.dir/sqstdblob.cpp.o
+                  [ 79%] Building CXX object sqstdlib/CMakeFiles/sqstdlib_static.dir/sqstdio.cpp.o
+                  [ 81%] Building CXX object sqstdlib/CMakeFiles/sqstdlib_static.dir/sqstdmath.cpp.o
+                  [ 83%] Building CXX object sqstdlib/CMakeFiles/sqstdlib_static.dir/sqstdrex.cpp.o
+                  [ 85%] Building CXX object sqstdlib/CMakeFiles/sqstdlib_static.dir/sqstdstream.cpp.o
+                  [ 87%] Building CXX object sqstdlib/CMakeFiles/sqstdlib_static.dir/sqstdstring.cpp.o
+                  [ 89%] Building CXX object sqstdlib/CMakeFiles/sqstdlib_static.dir/sqstdsystem.cpp.o
+                  [ 91%] Linking CXX static library libsqstdlib_static.a
+                  [ 91%] Built target sqstdlib_static
+                  Scanning dependencies of target sq_static
+                  [ 93%] Building C object sq/CMakeFiles/sq_static.dir/sq.c.o
+                  [ 95%] Linking C executable sq_static
+                  [ 95%] Built target sq_static
+                  Scanning dependencies of target sq
+                  [ 97%] Building C object sq/CMakeFiles/sq.dir/sq.c.o
+                  [100%] Linking C executable sq
+                  [100%] Built target sq
+                  [  7%] Performing install step for 'squirrel'
+                  [ 27%] Built target squirrel_static
+                  [ 54%] Built target squirrel
+                  [ 72%] Built target sqstdlib
+                  [ 91%] Built target sqstdlib_static
+                  [ 95%] Built target sq_static
+                  [100%] Built target sq
+                  Install the project...
+                  -- Install configuration: ""
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/include/sqconfig.h
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/include/sqstdaux.h
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/include/sqstdblob.h
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/include/sqstdio.h
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/include/sqstdmath.h
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/include/sqstdstring.h
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/include/sqstdsystem.h
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/include/squirrel.h
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/lib/libsquirrel.so.0.0.0
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/lib/libsquirrel.so.0
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/lib/libsquirrel.so
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/lib/libsquirrel_static.a
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/lib/libsqstdlib.so.0.0.0
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/lib/libsqstdlib.so.0
+                  -- Set runtime path of "/usr/games/supertux/build/squirrel/ex/lib/libsqstdlib.so.0.0.0" to ""
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/lib/libsqstdlib.so
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/lib/libsqstdlib_static.a
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/bin/sq
+                  -- Set runtime path of "/usr/games/supertux/build/squirrel/ex/bin/sq" to ""
+                  -- Installing: /usr/games/supertux/build/squirrel/ex/bin/sq_static
+                  [  7%] Completed 'squirrel'
+                  [  7%] Built target squirrel
+                  Scanning dependencies of target SDL_ttf
+                  [  7%] Creating directories for 'SDL_ttf'
+                  [  7%] No download step for 'SDL_ttf'
+                  [  7%] No patch step for 'SDL_ttf'
+                  [  8%] No update step for 'SDL_ttf'
+                  [  8%] Performing configure step for 'SDL_ttf'
+                  -- The C compiler identification is GNU 8.3.0
+                  -- Check for working C compiler: /usr/bin/cc
+                  -- Check for working C compiler: /usr/bin/cc -- works
+                  -- Detecting C compiler ABI info
+                  -- Detecting C compiler ABI info - done
+                  -- Detecting C compile features
+                  -- Detecting C compile features - done
+                  -- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.9.1") 
+                  -- Link-time dependencies:
+                  --   /usr/lib/x86_64-linux-gnu/libSDL2.so
+                  --   /usr/lib/x86_64-linux-gnu/libfreetype.so
+                  -- Configuring done
+                  -- Generating done
+                  -- Build files have been written to: /usr/games/supertux/build/SDL_ttf-prefix/src/SDL_ttf-build
+                  [  8%] Performing build step for 'SDL_ttf'
+                  Scanning dependencies of target SDL2_ttf
+                  [ 50%] Building C object CMakeFiles/SDL2_ttf.dir/SDL_ttf.c.o
+                  [100%] Linking C static library libSDL2_ttf.a
+                  [100%] Built target SDL2_ttf
+                  [  8%] Performing install step for 'SDL_ttf'
+                  [100%] Built target SDL2_ttf
+                  Install the project...
+                  -- Install configuration: ""
+                  -- Installing: /usr/games/supertux/build/SDL_ttf/lib/libSDL2_ttf.a
+                  -- Installing: /usr/games/supertux/build/SDL_ttf/include/SDL2/SDL_ttf.h
+                  [  8%] Completed 'SDL_ttf'
+                  [  8%] Built target SDL_ttf
+                  Scanning dependencies of target supertux2_lib
+                  [  9%] Building CXX object CMakeFiles/supertux2_lib.dir/src/addon/addon.cpp.o
+                  [  9%] Building CXX object CMakeFiles/supertux2_lib.dir/src/addon/addon_manager.cpp.o
+                  [  9%] Building CXX object CMakeFiles/supertux2_lib.dir/src/addon/downloader.cpp.o
+                  [  9%] Building CXX object CMakeFiles/supertux2_lib.dir/src/addon/md5.cpp.o
+                  [  9%] Building CXX object CMakeFiles/supertux2_lib.dir/src/audio/dummy_sound_source.cpp.o
+                  [ 10%] Building CXX object CMakeFiles/supertux2_lib.dir/src/audio/ogg_sound_file.cpp.o
+                  [ 10%] Building CXX object CMakeFiles/supertux2_lib.dir/src/audio/openal_sound_source.cpp.o
+                  [ 10%] Building CXX object CMakeFiles/supertux2_lib.dir/src/audio/sound_error.cpp.o
+                  [ 10%] Building CXX object CMakeFiles/supertux2_lib.dir/src/audio/sound_file.cpp.o
+                  [ 10%] Building CXX object CMakeFiles/supertux2_lib.dir/src/audio/sound_manager.cpp.o
+                  [ 11%] Building CXX object CMakeFiles/supertux2_lib.dir/src/audio/stream_sound_source.cpp.o
+                  [ 11%] Building CXX object CMakeFiles/supertux2_lib.dir/src/audio/wav_sound_file.cpp.o
+                  [ 11%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/angrystone.cpp.o
+                  [ 11%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/badguy.cpp.o
+                  [ 11%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/bomb.cpp.o
+                  [ 12%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/bouncing_snowball.cpp.o
+                  [ 12%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/captainsnowball.cpp.o
+                  [ 12%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/crystallo.cpp.o
+                  [ 12%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/dart.cpp.o
+                  [ 13%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/darttrap.cpp.o
+                  [ 13%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/dispenser.cpp.o
+                  [ 13%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/fish.cpp.o
+                  [ 13%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/flame.cpp.o
+                  [ 13%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/flyingsnowball.cpp.o
+                  [ 14%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/ghostflame.cpp.o
+                  [ 14%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/ghosttree.cpp.o
+                  [ 14%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/ghoul.cpp.o
+                  [ 14%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/goldbomb.cpp.o
+                  [ 14%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/haywire.cpp.o
+                  [ 15%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/iceflame.cpp.o
+                  [ 15%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/igel.cpp.o
+                  [ 15%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/jumpy.cpp.o
+                  [ 15%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/kamikazesnowball.cpp.o
+                  [ 15%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/kugelblitz.cpp.o
+                  [ 16%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/livefire.cpp.o
+                  [ 16%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/mole.cpp.o
+                  [ 16%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/mole_rock.cpp.o
+                  [ 16%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/mrbomb.cpp.o
+                  [ 17%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/mriceblock.cpp.o
+                  [ 17%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/mrtree.cpp.o
+                  [ 17%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/owl.cpp.o
+                  [ 17%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/plant.cpp.o
+                  [ 17%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/poisonivy.cpp.o
+                  [ 18%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/root.cpp.o
+                  [ 18%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/short_fuse.cpp.o
+                  [ 18%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/skullyhop.cpp.o
+                  [ 18%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/skydive.cpp.o
+                  [ 18%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/smartball.cpp.o
+                  [ 19%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/smartblock.cpp.o
+                  [ 19%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/snail.cpp.o
+                  [ 19%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/snowball.cpp.o
+                  [ 19%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/snowman.cpp.o
+                  [ 19%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/spidermite.cpp.o
+                  [ 20%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/spiky.cpp.o
+                  [ 20%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/sspiky.cpp.o
+                  [ 20%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/stalactite.cpp.o
+                  [ 20%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/stumpy.cpp.o
+                  [ 21%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/toad.cpp.o
+                  [ 21%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/totem.cpp.o
+                  [ 21%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/treewillowisp.cpp.o
+                  [ 21%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/walking_badguy.cpp.o
+                  [ 21%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/walking_candle.cpp.o
+                  [ 22%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/walkingleaf.cpp.o
+                  [ 22%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/willowisp.cpp.o
+                  [ 22%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/yeti.cpp.o
+                  [ 22%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/yeti_stalactite.cpp.o
+                  [ 22%] Building CXX object CMakeFiles/supertux2_lib.dir/src/badguy/zeekling.cpp.o
+                  [ 23%] Building CXX object CMakeFiles/supertux2_lib.dir/src/collision/collision.cpp.o
+                  [ 23%] Building CXX object CMakeFiles/supertux2_lib.dir/src/collision/collision_object.cpp.o
+                  [ 23%] Building CXX object CMakeFiles/supertux2_lib.dir/src/collision/collision_system.cpp.o
+                  [ 23%] Building CXX object CMakeFiles/supertux2_lib.dir/src/control/codecontroller.cpp.o
+                  [ 23%] Building CXX object CMakeFiles/supertux2_lib.dir/src/control/controller.cpp.o
+                  [ 24%] Building CXX object CMakeFiles/supertux2_lib.dir/src/control/game_controller_manager.cpp.o
+                  [ 24%] Building CXX object CMakeFiles/supertux2_lib.dir/src/control/input_manager.cpp.o
+                  [ 24%] Building CXX object CMakeFiles/supertux2_lib.dir/src/control/joystick_config.cpp.o
+                  [ 24%] Building CXX object CMakeFiles/supertux2_lib.dir/src/control/joystick_manager.cpp.o
+                  [ 25%] Building CXX object CMakeFiles/supertux2_lib.dir/src/control/keyboard_config.cpp.o
+                  [ 25%] Building CXX object CMakeFiles/supertux2_lib.dir/src/control/keyboard_manager.cpp.o
+                  [ 25%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/button_widget.cpp.o
+                  [ 25%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/editor.cpp.o
+                  [ 25%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/layer_icon.cpp.o
+                  [ 26%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/layers_widget.cpp.o
+                  [ 26%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/marker_object.cpp.o
+                  [ 26%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/node_marker.cpp.o
+                  [ 26%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/object_group.cpp.o
+                  [ 26%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/object_icon.cpp.o
+                  [ 27%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/object_info.cpp.o
+                  [ 27%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/object_menu.cpp.o
+                  [ 27%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/object_option.cpp.o
+                  [ 27%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/object_settings.cpp.o
+                  [ 27%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/overlay_widget.cpp.o
+                  [ 28%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/resize_marker.cpp.o
+                  [ 28%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/scroller_widget.cpp.o
+                  [ 28%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/tile_selection.cpp.o
+                  [ 28%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/tip.cpp.o
+                  [ 29%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/tool_icon.cpp.o
+                  [ 29%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/toolbox_widget.cpp.o
+                  [ 29%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/undo_manager.cpp.o
+                  [ 29%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/util.cpp.o
+                  [ 29%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/widget.cpp.o
+                  [ 30%] Building CXX object CMakeFiles/supertux2_lib.dir/src/editor/worldmap_objects.cpp.o
+                  [ 30%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/dialog.cpp.o
+                  [ 30%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_action.cpp.o
+                  [ 30%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_back.cpp.o
+                  [ 30%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_badguy_select.cpp.o
+                  [ 31%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_color.cpp.o
+                  [ 31%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_colorchannel.cpp.o
+                  [ 31%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_colordisplay.cpp.o
+                  [ 31%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_controlfield.cpp.o
+                  [ 31%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_file.cpp.o
+                  [ 32%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_floatfield.cpp.o
+                  [ 32%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_goto.cpp.o
+                  [ 32%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_hl.cpp.o
+                  [ 32%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_inactive.cpp.o
+                  [ 33%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_intfield.cpp.o
+                  [ 33%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_label.cpp.o
+                  [ 33%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_script.cpp.o
+                  [ 33%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_script_line.cpp.o
+                  [ 33%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_stringselect.cpp.o
+                  [ 34%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_textfield.cpp.o
+                  [ 34%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/item_toggle.cpp.o
+                  [ 34%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/menu.cpp.o
+                  [ 34%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/menu_badguy_select.cpp.o
+                  [ 34%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/menu_color.cpp.o
+                  [ 35%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/menu_filesystem.cpp.o
+                  [ 35%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/menu_item.cpp.o
+                  [ 35%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/menu_manager.cpp.o
+                  [ 35%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/menu_script.cpp.o
+                  [ 35%] Building CXX object CMakeFiles/supertux2_lib.dir/src/gui/mousecursor.cpp.o
+                  [ 36%] Building CXX object CMakeFiles/supertux2_lib.dir/src/math/aatriangle.cpp.o
+                  [ 36%] Building CXX object CMakeFiles/supertux2_lib.dir/src/math/anchor_point.cpp.o
+                  [ 36%] Building CXX object CMakeFiles/supertux2_lib.dir/src/math/easing.cpp.o
+                  [ 36%] Building CXX object CMakeFiles/supertux2_lib.dir/src/math/random.cpp.o
+                  [ 37%] Building CXX object CMakeFiles/supertux2_lib.dir/src/math/rect.cpp.o
+                  [ 37%] Building CXX object CMakeFiles/supertux2_lib.dir/src/math/rectf.cpp.o
+                  [ 37%] Building CXX object CMakeFiles/supertux2_lib.dir/src/math/size.cpp.o
+                  [ 37%] Building CXX object CMakeFiles/supertux2_lib.dir/src/math/sizef.cpp.o
+                  [ 37%] Building CXX object CMakeFiles/supertux2_lib.dir/src/math/vector.cpp.o
+                  [ 38%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/ambient_light.cpp.o
+                  [ 38%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/ambient_sound.cpp.o
+                  [ 38%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/background.cpp.o
+                  [ 38%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/bicycle_platform.cpp.o
+                  [ 38%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/block.cpp.o
+                  [ 39%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/bonus_block.cpp.o
+                  [ 39%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/bouncy_coin.cpp.o
+                  [ 39%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/brick.cpp.o
+                  [ 39%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/bullet.cpp.o
+                  [ 39%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/bumper.cpp.o
+                  [ 40%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/camera.cpp.o
+                  [ 40%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/candle.cpp.o
+                  [ 40%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/circleplatform.cpp.o
+                  [ 40%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/cloud_particle_system.cpp.o
+                  [ 41%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/coin.cpp.o
+                  [ 41%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/coin_explode.cpp.o
+                  [ 41%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/coin_rain.cpp.o
+                  [ 41%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/cutscene_info.cpp.o
+                  [ 41%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/decal.cpp.o
+                  [ 42%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/display_effect.cpp.o
+                  [ 42%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/electrifier.cpp.o
+                  [ 42%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/endsequence.cpp.o
+                  [ 42%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/endsequence_fireworks.cpp.o
+                  [ 42%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/endsequence_walkleft.cpp.o
+                  [ 43%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/endsequence_walkright.cpp.o
+                  [ 43%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/explosion.cpp.o
+                  [ 43%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/fallblock.cpp.o
+                  [ 43%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/falling_coin.cpp.o
+                  [ 43%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/firefly.cpp.o
+                  [ 44%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/fireworks.cpp.o
+                  [ 44%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/floating_image.cpp.o
+                  [ 44%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/floating_text.cpp.o
+                  [ 44%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/flower.cpp.o
+                  [ 45%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/ghost_particle_system.cpp.o
+                  [ 45%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/gradient.cpp.o
+                  [ 45%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/growup.cpp.o
+                  [ 45%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/hurting_platform.cpp.o
+                  [ 45%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/icecrusher.cpp.o
+                  [ 46%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/infoblock.cpp.o
+                  [ 46%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/invisible_block.cpp.o
+                  [ 46%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/invisible_wall.cpp.o
+                  [ 46%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/ispy.cpp.o
+                  [ 46%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/lantern.cpp.o
+                  [ 47%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/level_time.cpp.o
+                  [ 47%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/light.cpp.o
+                  [ 47%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/magicblock.cpp.o
+                  [ 47%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/moving_sprite.cpp.o
+                  [ 47%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/music_object.cpp.o
+                  [ 48%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/oneup.cpp.o
+                  [ 48%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/particles.cpp.o
+                  [ 48%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/particlesystem.cpp.o
+                  [ 48%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/particlesystem_interactive.cpp.o
+                  [ 49%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/path.cpp.o
+                  [ 49%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/path_gameobject.cpp.o
+                  [ 49%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/path_object.cpp.o
+                  [ 49%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/path_walker.cpp.o
+                  [ 49%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/platform.cpp.o
+                  [ 50%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/player.cpp.o
+                  [ 50%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/pneumatic_platform.cpp.o
+                  [ 50%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/powerup.cpp.o
+                  [ 50%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/pulsing_light.cpp.o
+                  [ 50%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/pushbutton.cpp.o
+                  [ 51%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/rain_particle_system.cpp.o
+                  [ 51%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/rainsplash.cpp.o
+                  [ 51%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/rock.cpp.o
+                  [ 51%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/rublight.cpp.o
+                  [ 51%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/rusty_trampoline.cpp.o
+                  [ 52%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/scripted_object.cpp.o
+                  [ 52%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/skull_tile.cpp.o
+                  [ 52%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/smoke_cloud.cpp.o
+                  [ 52%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/snow_particle_system.cpp.o
+                  [ 53%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/spawnpoint.cpp.o
+                  [ 53%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/specialriser.cpp.o
+                  [ 53%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/spotlight.cpp.o
+                  [ 53%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/sprite_particle.cpp.o
+                  [ 53%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/star.cpp.o
+                  [ 54%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/text_array_object.cpp.o
+                  [ 54%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/text_object.cpp.o
+                  [ 54%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/textscroller.cpp.o
+                  [ 54%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/thunderstorm.cpp.o
+                  [ 54%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/tilemap.cpp.o
+                  [ 55%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/torch.cpp.o
+                  [ 55%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/trampoline.cpp.o
+                  [ 55%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/unstable_tile.cpp.o
+                  [ 55%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/vertical_stripes.cpp.o
+                  [ 55%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/water_drop.cpp.o
+                  [ 56%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/weak_block.cpp.o
+                  [ 56%] Building CXX object CMakeFiles/supertux2_lib.dir/src/object/wind.cpp.o
+                  [ 56%] Building CXX object CMakeFiles/supertux2_lib.dir/src/physfs/ifile_stream.cpp.o
+                  [ 56%] Building CXX object CMakeFiles/supertux2_lib.dir/src/physfs/ifile_streambuf.cpp.o
+                  [ 57%] Building CXX object CMakeFiles/supertux2_lib.dir/src/physfs/ofile_stream.cpp.o
+                  [ 57%] Building CXX object CMakeFiles/supertux2_lib.dir/src/physfs/ofile_streambuf.cpp.o
+                  [ 57%] Building CXX object CMakeFiles/supertux2_lib.dir/src/physfs/physfs_file_system.cpp.o
+                  [ 57%] Building CXX object CMakeFiles/supertux2_lib.dir/src/physfs/physfs_sdl.cpp.o
+                  [ 57%] Building CXX object CMakeFiles/supertux2_lib.dir/src/physfs/util.cpp.o
+                  [ 58%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/ambient_sound.cpp.o
+                  [ 58%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/background.cpp.o
+                  [ 58%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/badguy.cpp.o
+                  [ 58%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/camera.cpp.o
+                  [ 58%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/candle.cpp.o
+                  [ 59%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/decal.cpp.o
+                  [ 59%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/dispenser.cpp.o
+                  [ 59%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/display_effect.cpp.o
+                  [ 59%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/floating_image.cpp.o
+                  [ 59%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/functions.cpp.o
+                  [ 60%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/game_object.cpp.o
+                  [ 60%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/gradient.cpp.o
+                  [ 60%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/level.cpp.o
+                  [ 60%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/level_time.cpp.o
+                  [ 61%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/particlesystem.cpp.o
+                  [ 61%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/platform.cpp.o
+                  [ 61%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/player.cpp.o
+                  [ 61%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/scripted_object.cpp.o
+                  [ 61%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/sector.cpp.o
+                  [ 62%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/text.cpp.o
+                  [ 62%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/text_array.cpp.o
+                  [ 62%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/thunderstorm.cpp.o
+                  [ 62%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/tilemap.cpp.o
+                  [ 62%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/torch.cpp.o
+                  [ 63%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/willowisp.cpp.o
+                  [ 63%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/wind.cpp.o
+                  [ 63%] Building CXX object CMakeFiles/supertux2_lib.dir/src/scripting/wrapper.cpp.o
+                  [ 63%] Building CXX object CMakeFiles/supertux2_lib.dir/src/sdk/discord.cpp.o
+                  [ 63%] Building CXX object CMakeFiles/supertux2_lib.dir/src/sdk/integration.cpp.o
+                  [ 64%] Building CXX object CMakeFiles/supertux2_lib.dir/src/sprite/sprite.cpp.o
+                  [ 64%] Building CXX object CMakeFiles/supertux2_lib.dir/src/sprite/sprite_data.cpp.o
+                  [ 64%] Building CXX object CMakeFiles/supertux2_lib.dir/src/sprite/sprite_manager.cpp.o
+                  [ 64%] Building CXX object CMakeFiles/supertux2_lib.dir/src/squirrel/serialize.cpp.o
+                  [ 65%] Building CXX object CMakeFiles/supertux2_lib.dir/src/squirrel/squirrel_environment.cpp.o
+                  [ 65%] Building CXX object CMakeFiles/supertux2_lib.dir/src/squirrel/squirrel_error.cpp.o
+                  [ 65%] Building CXX object CMakeFiles/supertux2_lib.dir/src/squirrel/squirrel_scheduler.cpp.o
+                  [ 65%] Building CXX object CMakeFiles/supertux2_lib.dir/src/squirrel/squirrel_thread_queue.cpp.o
+                  [ 65%] Building CXX object CMakeFiles/supertux2_lib.dir/src/squirrel/squirrel_util.cpp.o
+                  [ 66%] Building CXX object CMakeFiles/supertux2_lib.dir/src/squirrel/squirrel_virtual_machine.cpp.o
+                  [ 66%] Building CXX object CMakeFiles/supertux2_lib.dir/src/squirrel/squirrel_vm.cpp.o
+                  [ 66%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/autotile.cpp.o
+                  [ 66%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/autotile_parser.cpp.o
+                  [ 66%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/colorscheme.cpp.o
+                  [ 67%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/command_line_arguments.cpp.o
+                  [ 67%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/console.cpp.o
+                  [ 67%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/controller_hud.cpp.o
+                  [ 67%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/d_scope.cpp.o
+                  [ 67%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/debug.cpp.o
+                  [ 68%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/direction.cpp.o
+                  [ 68%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/fadetoblack.cpp.o
+                  [ 68%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/flip_level_transformer.cpp.o
+                  [ 68%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/game_manager.cpp.o
+                  [ 69%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/game_object.cpp.o
+                  [ 69%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/game_object_factory.cpp.o
+                  [ 69%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/game_object_iterator.cpp.o
+                  [ 69%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/game_object_manager.cpp.o
+                  [ 69%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/game_session.cpp.o
+                  [ 70%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/game_session_recorder.cpp.o
+                  [ 70%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/gameconfig.cpp.o
+                  [ 70%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/globals.cpp.o
+                  [ 70%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/info_box.cpp.o
+                  [ 70%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/info_box_line.cpp.o
+                  [ 71%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/level.cpp.o
+                  [ 71%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/level_parser.cpp.o
+                  [ 71%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/level_transformer.cpp.o
+                  [ 71%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/levelintro.cpp.o
+                  [ 71%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/levelset.cpp.o
+                  [ 72%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/levelset_screen.cpp.o
+                  [ 72%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/main.cpp.o
+                  [ 72%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/addon_menu.cpp.o
+                  [ 72%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/cheat_menu.cpp.o
+                  [ 73%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/contrib_levelset_menu.cpp.o
+                  [ 73%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/contrib_menu.cpp.o
+                  [ 73%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/debug_menu.cpp.o
+                  [ 73%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/download_dialog.cpp.o
+                  [ 73%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/editor_level_menu.cpp.o
+                  [ 74%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/editor_level_select_menu.cpp.o
+                  [ 74%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/editor_levelset_menu.cpp.o
+                  [ 74%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/editor_levelset_select_menu.cpp.o
+                  [ 74%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/editor_menu.cpp.o
+                  [ 74%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/editor_new_levelset_menu.cpp.o
+                  [ 75%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/editor_objectgroup_menu.cpp.o
+                  [ 75%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/editor_sector_menu.cpp.o
+                  [ 75%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/editor_sectors_menu.cpp.o
+                  [ 75%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/editor_tilegroup_menu.cpp.o
+                  [ 75%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/game_menu.cpp.o
+                  [ 76%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/integrations_menu.cpp.o
+                  [ 76%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/joystick_menu.cpp.o
+                  [ 76%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/keyboard_menu.cpp.o
+                  [ 76%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/language_menu.cpp.o
+                  [ 77%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/main_menu.cpp.o
+                  [ 77%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/menu_storage.cpp.o
+                  [ 77%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/options_menu.cpp.o
+                  [ 77%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/profile_menu.cpp.o
+                  [ 77%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/world_set_menu.cpp.o
+                  [ 78%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/worldmap_cheat_menu.cpp.o
+                  [ 78%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/menu/worldmap_menu.cpp.o
+                  [ 78%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/moving_object.cpp.o
+                  [ 78%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/object_factory.cpp.o
+                  [ 78%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/physic.cpp.o
+                  [ 79%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/player_status.cpp.o
+                  [ 79%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/player_status_hud.cpp.o
+                  [ 79%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/resources.cpp.o
+                  [ 79%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/savegame.cpp.o
+                  [ 79%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/screen_manager.cpp.o
+                  [ 80%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/sector.cpp.o
+                  [ 80%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/sector_parser.cpp.o
+                  [ 80%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/sequence.cpp.o
+                  [ 80%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/shrinkfade.cpp.o
+                  [ 81%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/statistics.cpp.o
+                  [ 81%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/textscroller_screen.cpp.o
+                  [ 81%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/tile.cpp.o
+                  [ 81%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/tile_manager.cpp.o
+                  [ 81%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/tile_set.cpp.o
+                  [ 82%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/tile_set_parser.cpp.o
+                  [ 82%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/timer.cpp.o
+                  [ 82%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/title_screen.cpp.o
+                  [ 82%] Building CXX object CMakeFiles/supertux2_lib.dir/src/supertux/world.cpp.o
+                  [ 82%] Building CXX object CMakeFiles/supertux2_lib.dir/src/trigger/climbable.cpp.o
+                  [ 83%] Building CXX object CMakeFiles/supertux2_lib.dir/src/trigger/door.cpp.o
+                  [ 83%] Building CXX object CMakeFiles/supertux2_lib.dir/src/trigger/scripttrigger.cpp.o
+                  [ 83%] Building CXX object CMakeFiles/supertux2_lib.dir/src/trigger/secretarea_trigger.cpp.o
+                  [ 83%] Building CXX object CMakeFiles/supertux2_lib.dir/src/trigger/sequence_trigger.cpp.o
+                  [ 83%] Building CXX object CMakeFiles/supertux2_lib.dir/src/trigger/switch.cpp.o
+                  [ 84%] Building CXX object CMakeFiles/supertux2_lib.dir/src/trigger/trigger_base.cpp.o
+                  [ 84%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/file_system.cpp.o
+                  [ 84%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/gettext.cpp.o
+                  [ 84%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/line_iterator.cpp.o
+                  [ 85%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/log.cpp.o
+                  [ 85%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/reader.cpp.o
+                  [ 85%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/reader_collection.cpp.o
+                  [ 85%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/reader_document.cpp.o
+                  [ 85%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/reader_iterator.cpp.o
+                  [ 86%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/reader_mapping.cpp.o
+                  [ 86%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/reader_object.cpp.o
+                  [ 86%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/string_util.cpp.o
+                  [ 86%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/timelog.cpp.o
+                  [ 86%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/uid.cpp.o
+                  [ 87%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/uid_generator.cpp.o
+                  [ 87%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/unique_name.cpp.o
+                  [ 87%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/utf8_iterator.cpp.o
+                  [ 87%] Building CXX object CMakeFiles/supertux2_lib.dir/src/util/writer.cpp.o
+                  [ 87%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/bitmap_font.cpp.o
+                  [ 88%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/blend.cpp.o
+                  [ 88%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/canvas.cpp.o
+                  [ 88%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/color.cpp.o
+                  [ 88%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/compositor.cpp.o
+                  [ 89%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/drawing_context.cpp.o
+                  [ 89%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/drawing_target.cpp.o
+                  [ 89%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/font.cpp.o
+                  [ 89%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/gl/gl20_context.cpp.o
+                  [ 89%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/gl/gl33core_context.cpp.o
+                  [ 90%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/gl/gl_framebuffer.cpp.o
+                  [ 90%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/gl/gl_painter.cpp.o
+                  [ 90%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/gl/gl_pixel_request.cpp.o
+                  [ 90%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/gl/gl_program.cpp.o
+                  [ 90%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/gl/gl_renderer.cpp.o
+                  [ 91%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/gl/gl_screen_renderer.cpp.o
+                  [ 91%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/gl/gl_shader.cpp.o
+                  [ 91%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/gl/gl_texture.cpp.o
+                  [ 91%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/gl/gl_texture_renderer.cpp.o
+                  [ 91%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/gl/gl_vertex_arrays.cpp.o
+                  [ 92%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/gl/gl_video_system.cpp.o
+                  [ 92%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/null/null_painter.cpp.o
+                  [ 92%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/null/null_renderer.cpp.o
+                  [ 92%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/null/null_texture.cpp.o
+                  [ 93%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/null/null_video_system.cpp.o
+                  [ 93%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/sampler.cpp.o
+                  [ 93%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/sdl/sdl_painter.cpp.o
+                  [ 93%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/sdl/sdl_screen_renderer.cpp.o
+                  [ 93%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/sdl/sdl_texture.cpp.o
+                  [ 94%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/sdl/sdl_texture_renderer.cpp.o
+                  [ 94%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/sdl/sdl_video_system.cpp.o
+                  [ 94%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/sdl_surface.cpp.o
+                  [ 94%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/sdlbase_video_system.cpp.o
+                  [ 94%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/surface.cpp.o
+                  [ 95%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/surface_batch.cpp.o
+                  [ 95%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/texture.cpp.o
+                  [ 95%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/texture_manager.cpp.o
+                  [ 95%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/ttf_font.cpp.o
+                  [ 95%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/ttf_surface.cpp.o
+                  [ 96%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/ttf_surface_manager.cpp.o
+                  [ 96%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/video_system.cpp.o
+                  [ 96%] Building CXX object CMakeFiles/supertux2_lib.dir/src/video/viewport.cpp.o
+                  [ 96%] Building CXX object CMakeFiles/supertux2_lib.dir/src/worldmap/camera.cpp.o
+                  [ 97%] Building CXX object CMakeFiles/supertux2_lib.dir/src/worldmap/direction.cpp.o
+                  [ 97%] Building CXX object CMakeFiles/supertux2_lib.dir/src/worldmap/level_tile.cpp.o
+                  [ 97%] Building CXX object CMakeFiles/supertux2_lib.dir/src/worldmap/spawn_point.cpp.o
+                  [ 97%] Building CXX object CMakeFiles/supertux2_lib.dir/src/worldmap/special_tile.cpp.o
+                  [ 97%] Building CXX object CMakeFiles/supertux2_lib.dir/src/worldmap/sprite_change.cpp.o
+                  [ 98%] Building CXX object CMakeFiles/supertux2_lib.dir/src/worldmap/teleporter.cpp.o
+                  [ 98%] Building CXX object CMakeFiles/supertux2_lib.dir/src/worldmap/tux.cpp.o
+                  [ 98%] Building CXX object CMakeFiles/supertux2_lib.dir/src/worldmap/worldmap.cpp.o
+                  [ 98%] Building CXX object CMakeFiles/supertux2_lib.dir/src/worldmap/worldmap_parser.cpp.o
+                  [ 98%] Building CXX object CMakeFiles/supertux2_lib.dir/src/worldmap/worldmap_screen.cpp.o
+                  [ 99%] Building CXX object CMakeFiles/supertux2_lib.dir/src/worldmap/worldmap_state.cpp.o
+                  [ 99%] Linking CXX static library libsupertux2_lib.a
+                  [ 99%] Built target supertux2_lib
+                  Scanning dependencies of target supertux2
+                  [100%] Building CXX object CMakeFiles/supertux2.dir/src/main.cpp.o
+                  [100%] Linking CXX executable supertux2
+                  [100%] Built target supertux2
+                  Scanning dependencies of target send-presence
+                  [100%] Building C object external/discord-sdk/examples/send-presence/CMakeFiles/send-presence.dir/send-presence.c.o
+                  [100%] Linking CXX executable send-presence
+                  [100%] Built target send-presence
 
 Summary for minion
 ------------
-Succeeded: 1
-Failed:    0
+Succeeded: 4 (changed=5)
+Failed:    1
 ------------
-Total states run:     1
-Total run time:  28.148 ms
-root@master:/srv/salt# 
+Total states run:     5
+Total run time: 1121.997 s
