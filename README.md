@@ -78,17 +78,59 @@
 
 ## 2. Файл состояния
 
-Создаем файл состояния для нашего minion'а. С помощью модуля `pkg.installed` устанавливаем игру supertux2 со всеми зависимостями (благо он есть в репозитории):
+Разобьем нашу задачу на несколько подзадач. Для установки игры supertux из исходников нам необходимо:
+1. Установить все необходимые библиотеки
+2. Загрузить исходники с репозитория supertux
+3. Скомпилировать игру
+Все данные пункты будем выполнять в отдельных блоках.
+### 2.1. Установка библиотек
+При помощи модуля `pkg.installed` устанавливаем все необходимые зависимости для нашей игры. Полный список зависимостей можно найти на сайте разработчика https://www.supertux.org. Модуль установки библиотек выглядит так:
 
-    supertux:
+    install_requirements:
       pkg.installed:
-        - pkg:
-          - supertux
+        - pkgs:
+          - git
+          - build-essential
+          - cmake
+          - subversion
+          - autoconf
+          - automake
+          - jam
+          - g++
+          - libfreetype6
+          - libsdl2-dev
+          - libsdl2-image-dev 
+          - libphysfs-dev
+          - libvorbis-dev
+          - libogg-dev
+          - libopenal-dev
+          - libfreetype6-dev
+          - libcurl3-dev
+          - libboost-all-dev
+          - libglew-dev
+  
+### 2.2. Загрузка исходных файлов
+Скачать исходники можно как с сайта разработчика, так и с git'a, что намного удобней и проще. Не забываем обновить сабмодули! Модуль загрузки исходных файлов выглядит так:
 
-top.sls файл выглядит так:
+    download_supertux:
+      git.latest:
+        - name: https://github.com/SuperTux/supertux.git 
+        - rev: master
+        - target: /usr/games/supertux
+      cmd.run:
+        - cwd: /usr/games/supertux
+        - name: "git submodule update --init --recursive"
+        
+### 2.3. Компилирование supertux
+Последний, и самый ответственный этам - сборка игры из исходников. Модуль сборки выглядит так:
 
-    base:
-      'minion'
-        - supertux
-      
-Приводим состояние minion'а к необходимому командой `salt minion state.apply supertux`. Результат выполнения приложен в файле output_2.txt. В выводе видно, что модуль устанавливает все необходимые зависимости, а так же, что при повторном запуске minion остается в том же состоянии
+    install_supertux:
+      file.directory:
+        - name: /usr/games/supertux/build
+      cmd.run:
+        - cwd: /usr/games/supertux/build
+        - name: |
+            cmake ..
+            make
+            
+Полный файл состояния описывается в supertux.sls. Вывод работы salt содержится в файле output_2.txt
